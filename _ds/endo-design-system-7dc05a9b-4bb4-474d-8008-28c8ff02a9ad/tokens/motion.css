@@ -1,0 +1,11 @@
+:root{
+  /* Movement always starts at a centre and expands outward. Nothing bounces. */
+  --ease-calm:cubic-bezier(.22,.61,.36,1); /* @kind other */
+  --ease-enter:cubic-bezier(.16,.84,.44,1); /* @kind other */
+  --ease-exit:cubic-bezier(.4,0,.7,.2); /* @kind other */
+  --dur-fast:160ms; /* @kind other */
+  --dur-base:280ms; /* @kind other */
+  --dur-slow:520ms; /* @kind other */
+  --dur-reveal:900ms; /* @kind other */
+  --transform-origin-brand:50% 50%; /* @kind other */
+}

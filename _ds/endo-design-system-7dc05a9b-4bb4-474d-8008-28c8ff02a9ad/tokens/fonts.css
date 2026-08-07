@@ -1,0 +1,18 @@
+/* Brand webfonts. Files supplied by the endo brand package (uploads/). */
+@font-face{font-family:"BioRhyme";src:url("../assets/fonts/BioRhyme-ExtraLight.ttf") format("truetype");font-weight:200;font-style:normal;font-display:swap}
+@font-face{font-family:"BioRhyme";src:url("../assets/fonts/BioRhyme-Light.ttf") format("truetype");font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:"BioRhyme";src:url("../assets/fonts/BioRhyme-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"BioRhyme";src:url("../assets/fonts/BioRhyme-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"BioRhyme";src:url("../assets/fonts/BioRhyme-ExtraBold.ttf") format("truetype");font-weight:800;font-style:normal;font-display:swap}
+@font-face{font-family:"Autography";src:url("../assets/fonts/Autography.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap}
+/* NOTE: the supplied Helvetica Light file (uploads/helvetica-light-587ebe5a59211.ttf) is rejected by every
+   browser's font sanitiser (structurally valid sfnt, but it fails to parse — see readme "Known gaps").
+   Until a good Light file arrives, weight 300 resolves to the real Light face only where the OS has one
+   (macOS "Helvetica Neue"); elsewhere it falls back to Helvetica Regular. Never faux-bolded, never broken. */
+@font-face{font-family:"Helvetica Brand";src:local("Helvetica Neue Light"),local("HelveticaNeue-Light"),local("Helvetica Light");font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:"Helvetica Brand";src:url("../assets/fonts/Helvetica.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Helvetica Brand";src:url("../assets/fonts/Helvetica-Oblique.ttf") format("truetype");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Helvetica Brand";src:url("../assets/fonts/Helvetica-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Helvetica Brand";src:url("../assets/fonts/Helvetica-BoldOblique.ttf") format("truetype");font-weight:700;font-style:italic;font-display:swap}
+@font-face{font-family:"Helvetica Rounded Brand";src:url("../assets/fonts/Helvetica-Rounded-Bold.otf") format("opentype");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Helvetica Compressed Brand";src:url("../assets/fonts/Helvetica-Compressed.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap}
