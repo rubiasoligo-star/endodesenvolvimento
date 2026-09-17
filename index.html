@@ -9,10 +9,10 @@
 <template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#102945"/><circle cx="100" cy="100" r="42" fill="none" stroke="#EAE3D1" stroke-width="9" stroke-linecap="round" stroke-dasharray="235 30" transform="rotate(-35 100 100)"/></svg></template>
 <x-dc>
 <helmet>
-<title>endo | Desenvolvimento humano, lideranças e organizações</title>
-<meta name="description" content="A endo acompanha pessoas, lideranças, profissionais de RH e organizações em processos de desenvolvimento, transição e transformação.">
-<meta property="og:title" content="endo | Desenvolvimento humano, lideranças e organizações">
-<meta property="og:description" content="A endo acompanha pessoas, lideranças, profissionais de RH e organizações em processos de desenvolvimento, transição e transformação.">
+<title>Endo | Desenvolvimento humano, lideranças e organizações</title>
+<meta name="description" content="A Endo acompanha pessoas, lideranças, profissionais de RH e organizações em processos de desenvolvimento, transição e transformação.">
+<meta property="og:title" content="Endo | Desenvolvimento humano, lideranças e organizações">
+<meta property="og:description" content="A Endo acompanha pessoas, lideranças, profissionais de RH e organizações em processos de desenvolvimento, transição e transformação.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/logos/endo-stacked-blue-on-cream.png">
 <link rel="stylesheet" href="_ds/endo-design-system-7dc05a9b-4bb4-474d-8008-28c8ff02a9ad/tokens/fonts.css">
@@ -28,7 +28,7 @@
 <script src="./image-slot.js"></script>
 <style>
 html{scroll-behavior:smooth}
-body{margin:0;background:#ECEBE3;color:#4A4A46;font-family:"Helvetica Brand","Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+body{margin:0;overflow-x:hidden;-webkit-text-size-adjust:100%;background:#ECEBE3;color:#4A4A46;font-family:"Helvetica Brand","Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:#3C537C;text-decoration:none}
 a:hover{color:#8E5F63}
 :focus-visible{outline:2px solid rgba(60,83,124,.55);outline-offset:3px;border-radius:4px}
@@ -40,14 +40,17 @@ a:hover{color:#8E5F63}
 </helmet>
 
 <header id="endo-header" style="position:fixed;top:0;left:0;right:0;z-index:60;padding:16px var(--page-margin);transition:padding 280ms var(--ease-calm)">
-<div style="display:flex;justify-content:flex-end;max-width:1180px;margin:0 auto">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:24px;max-width:1180px;margin:0 auto">
+  <a href="#hero" data-action="nav" data-target="hero" aria-label="Endo — início" style="display:block;flex:0 0 auto">
+    <img id="endo-header-logo" src="assets/logos/endo-lockup-header-cream.png" alt="Endo — Desenvolvimento Humano" style="display:block;height:62px;width:auto">
+  </a>
 
 <div id="endo-header-glass" style="display: flex; align-items: center; justify-content: flex-end; gap: 24px; padding: 10px 14px 10px 22px; border-radius: 999px; background: rgba(255,253,237,.30); backdrop-filter: blur(14px) saturate(170%); -webkit-backdrop-filter: blur(14px) saturate(170%); border: 1px solid rgba(255,253,237,.42); box-shadow: 0 10px 30px -22px rgba(16,41,69,.28),inset 0 1px 0 rgba(255,255,255,.42); transition: background 280ms var(--ease-calm),backdrop-filter 280ms var(--ease-calm),box-shadow 280ms var(--ease-calm),border-color 280ms var(--ease-calm); position: relative; width: auto; margin-left: auto; box-sizing: border-box; min-height: 66px">
-  <nav data-desk="" aria-label="Navegação principal" style="display:flex;align-items:center;gap:34px">
+  <nav data-desk="" aria-label="Navegação principal" style="display:flex;align-items:center;gap:30px">
     <a href="#sobre" data-action="nav" data-target="sobre" style="font-size: 15px; color: var(--endo-navy-700); opacity: .78">Sobre</a>
-    <a href="#servicos" data-action="nav" data-target="servicos" style="font-size: 15px; color: var(--endo-navy-700); opacity: .78">Serviços</a>
-    <a href="#cases" data-action="nav" data-target="cases" style="font-size: 15px; color: var(--endo-navy-700); opacity: .78">Cases</a>
-    <a href="#depoimentos" data-action="nav" data-target="depoimentos" style="font-size: 15px; color: var(--endo-navy-700); opacity: .78">Depoimentos</a>
+    <a href="#servicos" data-action="nav" data-target="servicos" style="font-size: 15px; color: var(--endo-navy-700); opacity: .78">Como ajudamos</a>
+    <a href="#jeito" data-action="nav" data-target="jeito" style="font-size: 15px; color: var(--endo-navy-700); opacity: .78">O jeito Endo</a>
+    <a href="#fabiana" data-action="nav" data-target="fabiana" style="font-size: 15px; color: var(--endo-navy-700); opacity: .78">Fabiana</a>
     <a href="#contato" data-action="nav" data-target="contato" style="font-size: 15px; color: var(--endo-navy-700); opacity: .78">Contato</a>
     <x-import component-from-global-scope="EndoDesignSystem_7dc05a.Button" variant="primary" size="sm" data-action="nav" data-target="contato" hint-size="auto,38px">Vamos conversar</x-import>
   </nav>
@@ -58,338 +61,307 @@ a:hover{color:#8E5F63}
 </div>
 </div></header>
 
-<div id="endo-menu" role="dialog" aria-modal="true" aria-label="Menu" style="position:fixed;inset:0;z-index:80;display:none;flex-direction:column;gap:32px;padding:26px var(--page-margin) 48px;background:var(--endo-cream-100)">
+<div id="endo-menu" role="dialog" aria-modal="true" aria-label="Menu" style="position:fixed;inset:0;z-index:80;display:none;flex-direction:column;gap:clamp(20px,4vh,32px);padding:26px var(--page-margin) 48px;background:var(--endo-cream-100);overflow-y:auto;-webkit-overflow-scrolling:touch">
   <div style="display:flex;align-items:center;justify-content:space-between">
     <x-import component-from-global-scope="EndoDesignSystem_7dc05a.Logo" variant="horizontal" tone="blue" height="{{ 30 }}" hint-size="110px,30px"></x-import>
     <button data-action="menu-close" aria-label="Fechar menu" style="width:46px;height:46px;background:transparent;border:1px solid var(--border-cream);border-radius:999px;cursor:pointer;font-size:20px;color:var(--endo-navy-800);line-height:1">×</button>
   </div>
   <nav style="display:flex;flex-direction:column;gap:6px" aria-label="Navegação mobile">
     <a href="#sobre" data-action="nav" data-target="sobre" style="padding:14px 0;font-size:26px;font-weight:300;color:var(--text-strong);border-bottom:1px solid var(--border-soft)">Sobre</a>
+    <a href="#servicos" data-action="nav" data-target="servicos" style="padding:14px 0;font-size:26px;font-weight:300;color:var(--text-strong);border-bottom:1px solid var(--border-soft)">Como ajudamos</a>
+    <a href="#jeito" data-action="nav" data-target="jeito" style="padding:14px 0;font-size:26px;font-weight:300;color:var(--text-strong);border-bottom:1px solid var(--border-soft)">O jeito Endo</a>
     <a href="#fabiana" data-action="nav" data-target="fabiana" style="padding:14px 0;font-size:26px;font-weight:300;color:var(--text-strong);border-bottom:1px solid var(--border-soft)">Fabiana</a>
-    <a href="#servicos" data-action="nav" data-target="servicos" style="padding:14px 0;font-size:26px;font-weight:300;color:var(--text-strong);border-bottom:1px solid var(--border-soft)">Serviços</a>
-    <a href="#cases" data-action="nav" data-target="cases" style="padding:14px 0;font-size:26px;font-weight:300;color:var(--text-strong);border-bottom:1px solid var(--border-soft)">Cases</a>
-    <a href="#depoimentos" data-action="nav" data-target="depoimentos" style="padding:14px 0;font-size:26px;font-weight:300;color:var(--text-strong);border-bottom:1px solid var(--border-soft)">Depoimentos</a>
+    <a href="#origem" data-action="nav" data-target="origem" style="padding:14px 0;font-size:26px;font-weight:300;color:var(--text-strong);border-bottom:1px solid var(--border-soft)">Por que Endo</a>
     <a href="#contato" data-action="nav" data-target="contato" style="padding:14px 0;font-size:26px;font-weight:300;color:var(--text-strong)">Contato</a>
   </nav>
   <x-import component-from-global-scope="EndoDesignSystem_7dc05a.Button" variant="primary" size="lg" full="{{ true }}" data-action="nav" data-target="contato" hint-size="100%,52px">Vamos conversar</x-import>
 </div>
 
-<main style="display:block;overflow:hidden">
+<main style="display: block; overflow: hidden; position: relative">
 
   
 
-  <section id="hero" style="position: relative; scroll-margin-top: 96px; padding: clamp(128px,15vw,190px) var(--page-margin) clamp(72px,9vw,120px); background-color: var(--endo-blue-500)">
+  <section id="hero" style="position: relative; overflow: hidden; scroll-margin-top: 96px; display: flex; align-items: center; padding: clamp(140px,16vw,190px) var(--page-margin) clamp(72px,9vw,110px); background-color: var(--endo-navy-800)">
+    <img src="assets/photos/hero-fabiana.png" alt="Fabiana Domingues em seu ateliê, com luz natural e painéis de referência ao fundo" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:72% 30%;display:block">
+    <div id="endo-hero-veil" aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(96deg,rgba(16,41,69,.9) 0%,rgba(16,41,69,.78) 34%,rgba(16,41,69,.34) 56%,rgba(16,41,69,.05) 74%)"></div>
     
-  <div style="display: grid; grid-template-columns: repeat(auto-fit,minmax(330px,1fr)); gap: clamp(40px,6vw,88px); align-items: center; max-width: 1180px; margin: 0 auto; position: relative">
-      
-      <div id="endo-hero-copy" style="display: flex; flex-direction: column; align-items: flex-start; gap: 26px; position: relative">
+
+    <div style="position:relative;width:100%;max-width:1180px;margin:0 auto">
+      <div id="endo-hero-copy" style="display:flex;flex-direction:column;align-items:flex-start;gap:28px;max-width:min(620px,58%)">
         
-        
-        <img src="assets/logos/endo-marca-vertical.svg" alt="endo — Desenvolvimento Humano" style="display:block;height:167px;width:auto;margin-bottom:-8px;pointer-events:none"><h1 style="margin: 0; font-family: var(--font-sans); font-weight: 300; font-size: clamp(40px,5.4vw,72px); line-height: 1.08; letter-spacing: -0.02em; color: var(--endo-cream-300); animation: endoFadeUp 900ms 120ms var(--ease-enter) both; width: 605px; height: 165px">Toda transformação<br><b><i style="color: var(--endo-cream-200)">começa por dentro.</i></b></h1>
-        <p style="margin: 0; max-width: 46ch; font-size: 17px; line-height: 1.72; color: var(--endo-cream-200); text-wrap: pretty; animation: endoFadeUp 900ms 260ms var(--ease-enter) both">A endo acompanha pessoas, lideranças e organizações em momentos de transição, desenvolvimento e transformação — com profundidade, presença e respeito ao tempo de cada ciclo.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:14px;animation:endoFadeUp 900ms 400ms var(--ease-enter) both">
-          <a href="#sobre" data-action="nav" data-target="sobre" style="display:inline-flex;align-items:center;justify-content:center;padding:16px 32px;border-radius:999px;font-family:var(--font-sans);font-size:16px;color:var(--endo-navy-800);background:rgba(255,253,237,.82);backdrop-filter:blur(16px) saturate(180%);-webkit-backdrop-filter:blur(16px) saturate(180%);border:1px solid rgba(255,253,237,.7);box-shadow:0 14px 34px -22px rgba(16,41,69,.5),inset 0 1px 0 rgba(255,255,255,.6);transition:background 160ms var(--ease-calm),transform 160ms var(--ease-calm)" style-hover="background:rgba(255,253,237,.95)" style-active="transform:scale(.985)">Conheça a endo</a>
-          <a href="#contato" data-action="nav" data-target="contato" style="display:inline-flex;align-items:center;justify-content:center;padding:16px 32px;border-radius:999px;font-family:var(--font-sans);font-size:16px;color:var(--endo-cream-100);background:rgba(255,253,237,.12);backdrop-filter:blur(16px) saturate(180%);-webkit-backdrop-filter:blur(16px) saturate(180%);border:1px solid rgba(255,253,237,.42);box-shadow:0 14px 34px -24px rgba(16,41,69,.45),inset 0 1px 0 rgba(255,255,255,.28);transition:background 160ms var(--ease-calm),transform 160ms var(--ease-calm)" style-hover="background:rgba(255,253,237,.24)" style-active="transform:scale(.985)">Vamos conversar</a>
+        <h1 style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:clamp(40px,5.4vw,72px);line-height:1.08;letter-spacing:-0.02em;color:var(--endo-cream-300);text-wrap:pretty;animation:endoFadeUp 900ms 120ms var(--ease-enter) both">Toda transformação<br><strong style="font-weight:700">começa por dentro.</strong></h1>
+        <p style="margin:0;max-width:44ch;font-size:17px;line-height:1.72;color:rgba(255,253,237,.88);text-wrap:pretty;animation:endoFadeUp 900ms 260ms var(--ease-enter) both">A Endo acompanha pessoas e organizações em diferentes momentos e desafios, com escuta, presença e respeito à singularidade de cada contexto.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:14px;width:100%;animation:endoFadeUp 900ms 400ms var(--ease-enter) both">
+          <a href="#sobre" data-action="nav" data-target="sobre" data-full-mob="" style="display:inline-flex;align-items:center;justify-content:center;padding:16px 32px;border-radius:999px;font-family:var(--font-sans);font-size:16px;color:var(--endo-navy-800);background:rgba(255,253,237,.9);backdrop-filter:blur(16px) saturate(180%);-webkit-backdrop-filter:blur(16px) saturate(180%);border:1px solid rgba(255,253,237,.75);box-shadow:0 14px 34px -22px rgba(16,41,69,.5),inset 0 1px 0 rgba(255,255,255,.6);transition:background 160ms var(--ease-calm),transform 160ms var(--ease-calm)" style-hover="background:rgba(255,253,237,1)" style-active="transform:scale(.985)">Conheça a Endo</a>
+          <a href="#contato" data-action="nav" data-target="contato" data-full-mob="" style="display:inline-flex;align-items:center;justify-content:center;padding:16px 32px;border-radius:999px;font-family:var(--font-sans);font-size:16px;color:var(--endo-cream-100);background:rgba(255,253,237,.12);backdrop-filter:blur(16px) saturate(180%);-webkit-backdrop-filter:blur(16px) saturate(180%);border:1px solid rgba(255,253,237,.45);box-shadow:0 14px 34px -24px rgba(16,41,69,.45),inset 0 1px 0 rgba(255,255,255,.28);transition:background 160ms var(--ease-calm),transform 160ms var(--ease-calm)" style-hover="background:rgba(255,253,237,.24)" style-active="transform:scale(.985)">Vamos conversar</a>
         </div>
         
-      </div><div style="position:relative;justify-self:center;width:100%;max-width:480px">
-        <div style="position: relative; overflow: hidden; border-radius: 32px; background: var(--endo-navy-800); aspect-ratio: 4 / 5; box-shadow: var(--shadow-card)">
-          
-        <image-slot id="endo-hero-fabiana" shape="rect" fit="cover" placeholder="Foto profissional de Fabiana Domingues — luz natural, enquadramento editorial, espaço negativo" style="width:100%;height:100%"></image-slot></div>
-        <p style="margin: 14px 2px 0; font-size: 12px; letter-spacing: .02em; color: var(--endo-cream-200)">Espaço reservado para fotografia aprovada de Fabiana.</p>
       </div>
-    </div></section><section id="sobre" style="scroll-margin-top:96px;padding:clamp(72px,10vw,160px) var(--page-margin);background:var(--endo-cream-100)">
-    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(40px,6vw,96px);align-items:start">
-      <div data-reveal="" style="display:flex;flex-direction:column;gap:26px">
-        <x-import component-from-global-scope="EndoDesignSystem_7dc05a.SectionLabel" hint-size="auto,16px">A endo</x-import>
-        <h2 style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:clamp(28px,3.2vw,44px);line-height:1.22;letter-spacing:-0.01em;color:var(--endo-navy-800);max-width:24ch;text-wrap:pretty">Transformações consistentes não começam do lado de fora.</h2>
-        <div style="width:64px;height:1px;background:rgba(60,83,124,.3)"></div>
+    </div>
+  </section>
+
+  <section id="sobre" style="scroll-margin-top:96px;padding:clamp(72px,10vw,160px) var(--page-margin);background:var(--endo-cream-100)">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:clamp(40px,6vw,88px);align-items:center">
+      <div data-reveal="" style="display:flex;flex-direction:column;gap:28px;max-width:56ch">
+        <h2 style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:clamp(28px,3.2vw,44px);line-height:1.22;letter-spacing:-0.01em;color:var(--endo-navy-800);max-width:22ch;text-wrap:pretty">Há momentos em que é preciso perceber com mais clareza onde estamos, para compreender o que pode vir a seguir.</h2>
+        <p style="margin:0;font-size:17px;line-height:1.72;color:var(--text-body)">A vida, o trabalho e as organizações atravessam diferentes ciclos, e cada um deles pode trazer novas escolhas, desafios e possibilidades.</p>
+        <div style="display:flex;flex-direction:column;gap:18px;padding-top:26px;border-top:1px solid rgba(60,83,124,.22)">
+          <p style="margin:0;font-size:16.5px;line-height:1.78;color:var(--text-body)">Pode ser uma pessoa diante de uma escolha, de uma transição, de um novo desafio ou tentando compreender melhor algo que está vivendo.</p>
+          <p style="margin:0;font-size:16.5px;line-height:1.78;color:var(--text-body)">Pode ser uma liderança diante da complexidade de seu papel, e também daquilo que esse lugar mobiliza em quem o ocupa.</p>
+          <p style="margin:0;font-size:16.5px;line-height:1.78;color:var(--text-body)">Ou uma organização crescendo, se transformando e percebendo que as respostas de antes já não dão conta dos desafios de agora.</p>
+        </div>
       </div>
+      <div data-reveal="" style="justify-self:center;width:100%;max-width:470px;overflow:hidden;border-radius:28px;aspect-ratio:4 / 5;background:var(--endo-cream-300);box-shadow:var(--shadow-card)">
+        <img src="assets/photos/roda-conversa.png" alt="Roda de conversa entre profissionais em uma sala com luz natural" loading="lazy" style="width:100%;height:100%;display:block;object-fit:cover;object-position:58% 46%">
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos" style="scroll-margin-top:96px;padding:clamp(72px,10vw,160px) var(--page-margin);background:var(--endo-paper-100)">
+    <div style="max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(40px,5vw,72px)">
       <div data-reveal="" style="display:flex;flex-direction:column;gap:22px;max-width:58ch">
-        <p style="margin:0;font-size:17px;line-height:1.72;color:var(--text-body)">A endo é uma consultoria de desenvolvimento humano que atua no encontro entre pessoas, lideranças, cultura e negócio.</p>
-        <p style="margin:0;font-size:17px;line-height:1.72;color:var(--text-body)">Acompanha indivíduos e organizações em momentos nos quais algo precisa ser compreendido, fortalecido, ressignificado ou transformado.</p>
-        <p style="margin:0;font-size:17px;line-height:1.72;color:var(--text-body)">Mais do que oferecer respostas prontas, a endo cria espaços de reflexão, clareza e movimento. Porque mudanças sustentáveis precisam ser compreendidas, vividas e construídas no tempo de cada ciclo.</p>
-        <div data-acc="" style="margin-top:14px;border-top:1px solid var(--border-soft);border-bottom:1px solid var(--border-soft)">
-          <button data-action="acc" aria-expanded="false" style="display:flex;align-items:center;justify-content:space-between;gap:20px;width:100%;padding:22px 0;background:transparent;border:0;cursor:pointer;text-align:left;font-family:var(--font-sans);font-size:17px;font-weight:400;color:var(--endo-navy-800)">
-            O que significa o nome endo
-            <span data-acc-sign="" aria-hidden="true" style="flex:0 0 auto;width:9px;height:9px;margin-bottom:4px;border-right:1.5px solid var(--endo-blue-500);border-bottom:1.5px solid var(--endo-blue-500);transform:rotate(45deg);transition:transform 280ms var(--ease-calm)"></span>
-          </button>
-          <div data-acc-panel="" style="display:none;padding:0 0 24px">
-            <p style="margin:0;max-width:52ch;font-size:16px;line-height:1.72;color:var(--text-body)">endo carrega origem, memória e pertencimento. Ao mesmo tempo, convida a olhar para dentro — o lugar onde toda transformação começa.</p>
-          </div>
-        </div>
+        <x-import component-from-global-scope="EndoDesignSystem_7dc05a.SectionLabel" hint-size="auto,16px">Como a Endo pode ajudar</x-import>
+        <h2 style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:clamp(28px,3.2vw,44px);line-height:1.22;letter-spacing:-0.01em;color:var(--endo-navy-800)">Cada pessoa e cada organização vive desafios próprios.</h2>
+        <p style="margin:0;font-size:16.5px;line-height:1.78;color:var(--text-body)">Por isso, a Endo não parte de soluções prontas. Busca compreender o momento, o contexto e a necessidade para construir a forma de atuação mais adequada.</p>
       </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:20px">
+        <article data-reveal="" data-hoverable="" style="display:flex;flex-direction:column;gap:18px;padding:32px;border-radius:20px;background:var(--endo-cream-100);box-shadow:var(--shadow-card);transition:box-shadow 280ms var(--ease-calm),transform 280ms var(--ease-calm)">
+          <img src="assets/icons/frente-ikigai.png" alt="" aria-hidden="true" style="display:block;width:56px;height:56px">
+          <h3 style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:23px;line-height:1.26;color:var(--endo-navy-800)">Mentoria &amp; Coaching</h3>
+          <p style="margin:0;font-size:15.5px;line-height:1.7;color:var(--endo-rose-500)">Há momentos da trajetória profissional em que é importante criar espaço para refletir, ampliar perspectivas e fazer escolhas mais conscientes.</p>
+          <p style="margin:0;font-size:15.5px;line-height:1.72;color:var(--text-body)">A Endo conduz processos individuais que combinam escuta, reflexão, repertório, ferramentas e acompanhamento para apoiar cada pessoa na compreensão de seu momento e na construção de movimentos concretos.</p>
+          <div style="display:flex;flex-direction:column;gap:10px;margin-top:auto;padding-top:20px;border-top:1px solid var(--border-soft)">
+            <span style="font-size:12px;letter-spacing:.10em;text-transform:uppercase;color:var(--text-muted)">Pode apoiar</span>
+            <ul style="display:flex;flex-direction:column;gap:6px;margin:0;padding:0;list-style:none"><li style="font-size:15px;line-height:1.7;color:var(--text-body)">• Transições e escolhas de carreira</li><li style="font-size:15px;line-height:1.7;color:var(--text-body)">• Novos desafios profissionais</li><li style="font-size:15px;line-height:1.7;color:var(--text-body)">• Desenvolvimento e posicionamento na liderança</li><li style="font-size:15px;line-height:1.7;color:var(--text-body)">• Tomada de decisão</li><li style="font-size:15px;line-height:1.7;color:var(--text-body)">• Construção de caminhos de desenvolvimento</li></ul>
+          </div>
+          <div style="padding-top:6px">
+            <x-import component-from-global-scope="EndoDesignSystem_7dc05a.Button" variant="outline" size="sm" data-action="nav" data-target="contato" hint-size="auto,38px">Conversar sobre isso</x-import>
+          </div>
+        </article>
+        <article data-reveal="" data-hoverable="" style="display:flex;flex-direction:column;gap:18px;padding:32px;border-radius:20px;background:var(--endo-cream-100);box-shadow:var(--shadow-card);transition:box-shadow 280ms var(--ease-calm),transform 280ms var(--ease-calm)">
+          <img src="assets/icons/frente-makoto.png" alt="" aria-hidden="true" style="display:block;width:56px;height:56px">
+          <h3 style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:23px;line-height:1.26;color:var(--endo-navy-800)">Desenvolvimento de Lideranças</h3>
+          <p style="margin:0;font-size:15.5px;line-height:1.7;color:var(--endo-rose-500)">O desenvolvimento de líderes pode representar uma importante alavanca para o fortalecimento da capacidade organizacional e para a sustentação de seu crescimento.</p>
+          <p style="margin:0;font-size:15.5px;line-height:1.72;color:var(--text-body)">A Endo desenvolve soluções que ampliam a compreensão dos líderes sobre seu papel, sobre as pessoas, as equipes e as dinâmicas organizacionais, articulando desenvolvimento individual, aprendizagem coletiva e fortalecimento das práticas de gestão.</p>
+          <div style="display:flex;flex-direction:column;gap:10px;margin-top:auto;padding-top:20px;border-top:1px solid var(--border-soft)">
+            <span style="font-size:12px;letter-spacing:.10em;text-transform:uppercase;color:var(--text-muted)">Pode envolver</span>
+            <ul style="display:flex;flex-direction:column;gap:6px;margin:0;padding:0;list-style:none"><li style="font-size:15px;line-height:1.7;color:var(--text-body)">• Programas e jornadas de desenvolvimento</li><li style="font-size:15px;line-height:1.7;color:var(--text-body)">• Workshops</li><li style="font-size:15px;line-height:1.7;color:var(--text-body)">• Assessment</li><li style="font-size:15px;line-height:1.7;color:var(--text-body)">&nbsp;• Mentorias e processos individuais</li><li style="font-size:15px;line-height:1.7;color:var(--text-body)">• Facilitação de grupos</li></ul>
+          </div>
+          <div style="padding-top:6px">
+            <x-import component-from-global-scope="EndoDesignSystem_7dc05a.Button" variant="outline" size="sm" data-action="nav" data-target="contato" hint-size="auto,38px">Conversar sobre isso</x-import>
+          </div>
+        </article>
+        <article data-reveal="" data-hoverable="" style="display:flex;flex-direction:column;gap:18px;padding:32px;border-radius:20px;background:var(--endo-cream-100);box-shadow:var(--shadow-card);transition:box-shadow 280ms var(--ease-calm),transform 280ms var(--ease-calm)">
+          <img src="assets/icons/frente-sunao.png" alt="" aria-hidden="true" style="display:block;width:56px;height:56px">
+          <h3 style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:23px;line-height:1.26;color:var(--endo-navy-800)">Desenvolvimento Organizacional</h3>
+          <p style="margin:0;font-size:15.5px;line-height:1.7;color:var(--endo-rose-500)">À medida que uma organização cresce e se transforma, aumenta também a complexidade de sustentar seu desenvolvimento.</p>
+          <p style="margin:0;font-size:15.5px;line-height:1.72;color:var(--text-body)">A Endo apoia organizações na compreensão desses desafios e na construção de condições para sustentar seu desenvolvimento de forma integrada, considerando identidade, relações, processos e recursos, e as conexões entre essas dimensões.</p>
+          <div style="display:flex;flex-direction:column;gap:10px;margin-top:auto;padding-top:20px;border-top:1px solid var(--border-soft)">
+            <span style="font-size:12px;letter-spacing:.10em;text-transform:uppercase;color:var(--text-muted)">Pode envolver</span>
+            <ul style="display:flex;flex-direction:column;gap:6px;margin:0;padding:0;list-style:none"><li style="font-size:15px;line-height:1.7;color:var(--text-body)">• Diagnósticos organizacionais</li><li style="font-size:15px;line-height:1.7;color:var(--text-body)">• Desenvolvimento de equipes</li><li style="font-size:15px;line-height:1.7;color:var(--text-body)">• Facilitação de processos</li><li style="font-size:15px;line-height:1.7;color:var(--text-body)">• Jornadas e workshops</li><li style="font-size:15px;line-height:1.7;color:var(--text-body)">• Intervenções desenhadas a partir do contexto</li></ul>
+          </div>
+          <div style="padding-top:6px">
+            <x-import component-from-global-scope="EndoDesignSystem_7dc05a.Button" variant="outline" size="sm" data-action="nav" data-target="contato" hint-size="auto,38px">Conversar sobre isso</x-import>
+          </div>
+        </article>
+        <article data-reveal="" data-hoverable="" style="display:flex;flex-direction:column;gap:18px;padding:32px;border-radius:20px;background:var(--endo-cream-100);box-shadow:var(--shadow-card);transition:box-shadow 280ms var(--ease-calm),transform 280ms var(--ease-calm)">
+          <img src="assets/icons/frente-nagare.png" alt="" aria-hidden="true" style="display:block;width:56px;height:56px;border-radius:999px;box-shadow:0 0 0 1px rgba(60,83,124,.18)">
+          <h3 style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:23px;line-height:1.26;color:var(--endo-navy-800)">Assessoria Estratégica em Pessoas e Organização</h3>
+          <p style="margin:0;font-size:15.5px;line-height:1.7;color:var(--endo-rose-500)">Nem toda questão de pessoas e organização exige um projeto estruturado. Algumas pedem um espaço qualificado e continuado de reflexão, análise e tomada de decisão.</p>
+          <p style="margin:0;font-size:15.5px;line-height:1.72;color:var(--text-body)">A Endo atua como parceira de executivos, lideranças e áreas de pessoas, oferecendo experiência, repertório e um olhar externo para ampliar perspectivas, qualificar discussões e apoiar decisões relacionadas a pessoas, liderança e organização.</p>
+          <div style="display:flex;flex-direction:column;gap:10px;margin-top:auto;padding-top:20px;border-top:1px solid var(--border-soft)">
+            <span style="font-size:12px;letter-spacing:.10em;text-transform:uppercase;color:var(--text-muted)">Pode envolver</span>
+            <ul style="display:flex;flex-direction:column;gap:6px;margin:0;padding:0;list-style:none"><li style="font-size:15px;line-height:1.7;color:var(--text-body)">• Leitura e discussão de cenários</li><li style="font-size:15px;line-height:1.7;color:var(--text-body)">• Decisões de pessoas e organização</li><li style="font-size:15px;line-height:1.7;color:var(--text-body)">• Desafios de liderança e gestão</li><li style="font-size:15px;line-height:1.7;color:var(--text-body)">• Estrutura e relações</li><li style="font-size:15px;line-height:1.7;color:var(--text-body)">• Mudanças organizacionais</li><li style="font-size:15px;line-height:1.7;color:var(--text-body)">• Apoio estratégico a RH e executivos</li></ul>
+          </div>
+          <div style="padding-top:6px">
+            <x-import component-from-global-scope="EndoDesignSystem_7dc05a.Button" variant="outline" size="sm" data-action="nav" data-target="contato" hint-size="auto,38px">Conversar sobre isso</x-import>
+          </div>
+        </article>
+        <article data-reveal="" data-hoverable="" style="display:flex;flex-direction:column;gap:18px;padding:32px;border-radius:20px;background:var(--endo-cream-100);box-shadow:var(--shadow-card);transition:box-shadow 280ms var(--ease-calm),transform 280ms var(--ease-calm)">
+          <img src="assets/icons/frente-enso.png" alt="" aria-hidden="true" style="display:block;width:56px;height:56px">
+          <h3 style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:23px;line-height:1.26;color:var(--endo-navy-800)">Clínica da Liderança</h3>
+          <p style="margin:0;font-size:15.5px;line-height:1.7;color:var(--endo-rose-500)">Psicoterapia para quem lidera. <b>Antes de ocupar um papel de liderança, existe uma pessoa.</b></p>
+          <div style="margin:0;font-size:15.5px;line-height:1.72;color:var(--text-body)"><p>A Clínica da Liderança é um espaço de psicoterapia voltado a líderes, gestores e executivos. Considera a pessoa em sua integralidade e reconhece também as particularidades do contexto organizacional em que parte de suas experiências acontece.<br><br></p><p>Questões emocionais, conflitos, relações, decisões difíceis, transições, o peso das responsabilidades e as tensões vividas no exercício da liderança podem encontrar aqui um espaço de escuta, compreensão e elaboração, assim como questões que não tenham origem no trabalho.<br><br></p><p>Não é um processo orientado ao desenvolvimento de competências ou à performance. É psicoterapia para a pessoa que lidera.</p></div>
+          <div style="display:flex;flex-direction:column;gap:10px;margin-top:auto;padding-top:20px;border-top:1px solid var(--border-soft)">
+            
+            <ul style="display:flex;flex-direction:column;gap:6px;margin:0;padding:0;list-style:none"></ul>
+          </div>
+          <div style="padding-top:6px">
+            <x-import component-from-global-scope="EndoDesignSystem_7dc05a.Button" variant="outline" size="sm" data-action="nav" data-target="contato" hint-size="auto,38px">Conversar sobre isso</x-import>
+          </div>
+        </article>
+      </div>
+      
     </div>
   </section>
 
-  <section aria-label="Manifesto" style="position:relative;overflow:hidden;padding:clamp(80px,11vw,150px) var(--page-margin);background:var(--endo-navy-800)">
-    <div data-reveal="" style="position:relative;max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:34px;align-items:flex-start">
-      <img src="assets/marks/endo-animado.gif" alt="Marca endo em movimento" style="position: absolute; width: 547px; height: 306px; pointer-events: none; left: 666px; top: 99px">
-      <p style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:clamp(28px,3.6vw,52px);line-height:1.22;letter-spacing:-0.01em;color:var(--endo-cream-300);max-width:30ch;text-wrap:pretty">Antes da ação, existe consciência.<br><strong style="font-weight:700">Antes do movimento, existe presença.</strong></p>
-      <p style="margin:0;max-width:52ch;font-size:16px;line-height:1.72;color:rgba(234,227,209,.72)">A endo não trabalha com fórmulas prontas. Parte da ampliação de consciência, da leitura dos contextos e da construção de movimentos consistentes.</p>
+  <section id="jeito" style="position:relative;overflow:hidden;scroll-margin-top:96px;background:var(--endo-navy-800)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));align-items:stretch">
+
+      <div id="endo-jeito-media" style="position:relative;order:2;min-height:clamp(340px,44vw,620px)">
+        <img src="assets/photos/jeito-endo-facilitacao.png" alt="Fabiana Domingues facilitando uma conversa em grupo diante de um painel de post-its" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:48% 32%;display:block">
+        <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(270deg,rgba(16,41,69,0) 58%,rgba(16,41,69,.62) 100%)"></div>
+      </div>
+
+      <div id="endo-jeito-copy" data-reveal="" style="display:flex;flex-direction:column;justify-content:center;gap:clamp(24px,2.6vw,34px);padding:clamp(56px,7vw,104px) clamp(28px,5vw,88px)">
+        <span style="font-family:var(--font-sans);font-weight:700;font-size:12px;letter-spacing:.10em;color:rgba(234,227,209,.72)">· O jeito Endo</span>
+        <p style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:clamp(28px,3.4vw,46px);line-height:1.18;letter-spacing:-0.015em;color:var(--endo-cream-300);max-width:20ch;text-wrap:pretty">A Endo não parte de respostas prontas.<br><strong style="font-weight:700">Parte da compreensão.</strong></p>
+        <div style="display:flex;flex-direction:column;gap:18px;max-width:50ch">
+          <p style="margin:0;font-size:16.5px;line-height:1.78;color:rgba(234,227,209,.78)">Antes de construir caminhos, buscamos compreender o contexto, as pessoas, as relações e aquilo que está por trás da necessidade apresentada.</p>
+          <p style="margin:0;font-size:16.5px;line-height:1.78;color:rgba(234,227,209,.78)">Nem sempre o primeiro pedido revela a questão por inteiro. É a partir dessa compreensão que construímos caminhos coerentes com cada realidade, respeitando sua singularidade e seu momento.</p>
+        </div>
+        <p style="margin:0;max-width:50ch;font-size:16.5px;line-height:1.78;font-weight:700;color:var(--endo-cream-300);padding-top:24px;border-top:1px solid var(--border-on-deep)">Escuta, presença e respeito à singularidade orientam a forma como a Endo compreende cada contexto.</p>
+        <img src="assets/marks/endo-marca-animada.gif" alt="Marca Endo em movimento" style="display:block;width:clamp(150px,16vw,206px);height:auto;pointer-events:none">
+      </div>
+
     </div>
   </section>
-
-  
 
   <section id="fabiana" style="scroll-margin-top:96px;padding:clamp(72px,10vw,160px) var(--page-margin);background:var(--endo-paper-100)">
     <div style="max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(48px,6vw,80px)">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(40px,6vw,88px);align-items:center">
+      
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:clamp(40px,6vw,88px);align-items:center">
         <div data-reveal="" style="position:relative;width:100%;max-width:460px;justify-self:center">
-          <div style="overflow:hidden;border-radius:28px;background:var(--endo-cream-300);aspect-ratio:3 / 4;box-shadow:var(--shadow-card)">
-            <image-slot id="endo-fabiana-retrato" shape="rect" fit="cover" placeholder="Retrato editorial de Fabiana Domingues — escuta, conversa ou facilitação" style="width: 464px; height: 621px"></image-slot>
-          </div>
+          <div style="overflow: hidden; border-radius: 28px; background: var(--endo-cream-300); aspect-ratio: 3 / 4; box-shadow: var(--shadow-card); width: 100%; height: auto">
+            
+          <img src="assets/photos/fabiana-retrato.png" alt="Fabiana Domingues em seu escritório, com quimono estampado, diante do computador" loading="lazy" style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 66% 30%"></div>
           
         </div><div data-reveal="" style="display:flex;flex-direction:column;gap:24px;max-width:58ch">
-          <x-import component-from-global-scope="EndoDesignSystem_7dc05a.SectionLabel" hint-size="auto,16px">Fundadora</x-import>
+          <x-import component-from-global-scope="EndoDesignSystem_7dc05a.SectionLabel" hint-size="auto,16px">Quem conduz a Endo</x-import>
           <h2 style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:clamp(28px,3.2vw,44px);line-height:1.22;letter-spacing:-0.01em;color:var(--endo-navy-800);max-width:22ch">Fabiana Domingues</h2>
-          <p style="margin:0;font-size:17px;line-height:1.72;color:var(--text-body)">Consultora em desenvolvimento humano e organizacional. Psicóloga de formação, construiu mais de duas décadas de trajetória dentro de organizações de grande porte, como HR Business Partner de lideranças seniores.</p>
-          <p style="margin:0;font-size:17px;line-height:1.72;color:var(--text-body)">Sua trajetória reúne visão estratégica e uma escuta profundamente humana. A Endo nasce dessa integração: o desenvolvimento não como resposta pronta, mas como ampliação de consciência e construção de caminhos consistentes.</p>
+          <p style="margin:0;font-size:16.5px;line-height:1.78;color:var(--text-body)">A Endo é conduzida por Fabiana Domingues, psicóloga com uma trajetória construída ao longo de quase três décadas trabalhando com pessoas, lideranças e organizações.</p>
+          <p style="margin:0;font-size:16.5px;line-height:1.78;color:var(--text-body)">Sua experiência foi construída vivendo o ambiente corporativo por dentro, acompanhando diferentes negócios, contextos e níveis de liderança e participando de momentos de crescimento, transformação e mudança.</p>
+          <p style="margin:0;font-size:16.5px;line-height:1.78;color:var(--text-body)">Ao longo dessa trajetória, Fabiana esteve próxima das questões que atravessam a vida das pessoas e das organizações, construindo um olhar que combina Psicologia, experiência, escuta e compreensão das dinâmicas humanas e organizacionais.</p>
+          <p style="margin:0;font-size:16.5px;line-height:1.78;color:var(--endo-navy-800)">É desse olhar, e da convicção de que transformações consistentes começam pela compreensão do que acontece por dentro, que nasce a forma de trabalhar da endo.</p>
           
-          <h2 style="color: rgb(16, 41, 69); font-family: &quot;Helvetica Brand&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-weight: 300; line-height: 1.22; outline-offset: 3px; border-radius: 4px; font-size: clamp(28px, 3.2vw, 44px); letter-spacing: -0.01em; max-width: 22ch;">Experiência que <br>encontra presença.</h2><div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 18px;margin-top:6px">
+          <h2 style="color: var(--endo-rose-500); font-family: &quot;Helvetica Brand&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-weight: 300; line-height: 1.22; outline-offset: 3px; border-radius: 4px; font-size: clamp(28px, 3.2vw, 44px); letter-spacing: -0.01em; max-width: 22ch">Experiência que <br>encontra presença.</h2><div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 18px;margin-top:6px">
             <span style="font-size:17px;font-weight:700;color:var(--endo-navy-800)"></span>
             
           </div>
           
-          <div data-reveal="" data-acc="" style="margin-top:10px;border-radius:24px;background:rgba(255,253,237,.45);backdrop-filter:blur(18px) saturate(180%);-webkit-backdrop-filter:blur(18px) saturate(180%);border:1px solid rgba(255,253,237,.7);box-shadow:0 18px 44px -30px rgba(16,41,69,.45),inset 0 1px 0 rgba(255,255,255,.6)">
-        
-        <div data-acc-panel="" style="display:none;padding:0 30px 34px">
-          <div style="display:flex;flex-direction:column;gap:20px">
-            
-            <p style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:clamp(22px,2.4vw,30px);line-height:1.26;color:var(--endo-navy-800)">Antes de ser uma marca, <br>foi um jeito de olhar.</p><p style="margin:0;font-size:16.5px;line-height:1.8;color:var(--text-body)">Ao longo da minha trajetória, acompanhando pessoas, lideranças e organizações, fui percebendo que as mudanças mais importantes raramente começam do lado de fora. Elas começam quando algo se move por dentro — quando alguém encontra coragem para se olhar com mais honestidade.</p>
-            <p style="margin:0;font-size:16.5px;line-height:1.8;color:var(--text-body)">Foi nesse caminho que encontrei algumas palavras que traduziam, com delicadeza, princípios que sempre estiveram presentes na minha forma de trabalhar. Elas não são um método que eu aplico. São o modo como eu compreendo o desenvolvimento.</p>
-            <p style="margin:0;font-size:16.5px;line-height:1.8;color:var(--text-body)">Sunao me lembra que, antes de mudar, é preciso perceber — a abertura de escutar o que está pedindo passagem, mesmo quando é desconfortável.</p>
-            <p style="margin:0;font-size:16.5px;line-height:1.8;color:var(--text-body)">Makoto fala de verdade. Aproximar-se de si não é construir uma nova versão, é reconhecer o que já é verdadeiro e sustentar essa coerência.</p>
-            <p style="margin:0;font-size:16.5px;line-height:1.8;color:var(--text-body)">Ikigai aponta direção. Depois da escuta e da verdade, vem o movimento — não uma resposta definitiva, mas um próximo passo que faça sentido.</p>
-            <p style="margin:0;font-size:16.5px;line-height:1.8;color:var(--text-body)">E Nagare me ensina o respeito aos ciclos. Nem tudo se resolve na pressa. Há tempo de agir, tempo de esperar e tempo de permitir que algo amadureça.</p>
-            <p style="margin:0;font-size:16.5px;line-height:1.8;color:var(--text-body)">Todos esses movimentos cabem dentro de um mesmo círculo — o ensō, que na tradição zen representa presença e continuidade. Um traço que não se fecha por completo, porque o desenvolvimento também não se encerra. É ele que dá nome à origem: o lugar de onde tudo isso parte, e para onde sempre se pode voltar.</p>
-            <p style="margin:0;font-size:16.5px;line-height:1.8;color:var(--text-body)">Nenhuma dessas palavras aparece no dia a dia de um projeto. Elas não são o que eu ofereço — são o chão de onde parte a forma como escuto, pergunto e acompanho cada travessia.</p>
-          </div>
-        </div><button data-action="acc" aria-expanded="false" style="display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;padding:26px 30px;background:transparent;border:0;border-radius:24px;cursor:pointer;text-align:left">
-          <span style="font-family:var(--font-sans);font-weight:400;font-size:clamp(19px,2vw,24px);line-height:1.26;color:var(--endo-navy-800)"><span style="color:var(--endo-rose-500)">· </span>De onde nasce esse olhar</span>
-          <span data-acc-sign="" aria-hidden="true" style="flex:0 0 auto;width:13px;height:13px;border-right:1.5px solid var(--endo-blue-500);border-bottom:1.5px solid var(--endo-blue-500);transform:rotate(45deg);transition:transform 280ms var(--ease-calm)"></span>
-        </button>
-      </div>
+          
         </div>
         
-      </div>
-    </div>
-  </section><section id="servicos" style="scroll-margin-top:96px;padding:clamp(72px,10vw,160px) var(--page-margin);background:var(--endo-cream-100)">
-    <div style="max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(40px,5vw,72px)">
-      <div data-reveal="" style="display:flex;flex-direction:column;gap:22px;max-width:58ch">
-        <x-import component-from-global-scope="EndoDesignSystem_7dc05a.SectionLabel" hint-size="auto,16px">Frentes de atuação</x-import>
-        <h2 style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:clamp(28px,3.2vw,44px);line-height:1.22;letter-spacing:-0.01em;color:var(--endo-navy-800)">Como a transformação ganha forma</h2>
-        <p style="margin:0;font-size:17px;line-height:1.72;color:var(--text-body)">Cada pessoa, liderança ou organização atravessa desafios diferentes. Por isso, a atuação da endo não começa por uma solução pronta. Começa pela compreensão do contexto.</p>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px">
-
-        <article data-reveal="" data-hoverable="" style="display:flex;flex-direction:column;gap:16px;padding:26px;border-radius:20px;background:var(--endo-paper-100);box-shadow:var(--shadow-card);transition:box-shadow 280ms var(--ease-calm),transform 280ms var(--ease-calm)">
-          <x-import component-from-global-scope="EndoDesignSystem_7dc05a.ConceptIcon" concept="makoto" size="{{ 46 }}" hint-size="46px,46px"></x-import>
-          <div style="display:flex;flex-direction:column;gap:10px">
-            <h3 style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:20px;line-height:1.26;color:var(--endo-navy-800)">Programa de Liderança</h3>
-            <p style="margin:0;font-size:14px;color:var(--endo-rose-500)">Para quem conduz pessoas e quer conduzir com mais consciência.</p>
-          </div>
-          <p style="margin:0;font-size:14.5px;line-height:1.68;color:var(--text-body)">Processos para lideranças que desejam ampliar consciência sobre o próprio papel, fortalecer relações, desenvolver equipes e sustentar uma atuação mais estratégica e humana.</p>
-          <div style="margin-top:auto;padding-top:8px">
-            <x-import component-from-global-scope="EndoDesignSystem_7dc05a.Button" variant="ghost" size="sm" data-action="nav" data-target="contato" hint-size="auto,38px">Conversar sobre este desafio</x-import>
-          </div>
-        </article>
-
-        <article data-reveal="" data-hoverable="" style="display:flex;flex-direction:column;gap:16px;padding:26px;border-radius:20px;background:var(--endo-paper-100);box-shadow:var(--shadow-card);transition:box-shadow 280ms var(--ease-calm),transform 280ms var(--ease-calm)">
-          <x-import component-from-global-scope="EndoDesignSystem_7dc05a.ConceptIcon" concept="sunao" size="{{ 46 }}" hint-size="46px,46px"></x-import>
-          <div style="display:flex;flex-direction:column;gap:10px">
-            <h3 style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:20px;line-height:1.26;color:var(--endo-navy-800)">Desenvolvimento organizacional</h3>
-            <p style="margin:0;font-size:14px;color:var(--endo-rose-500)">Para organizações que precisam mudar mais do que processos.</p>
-          </div>
-          <p style="margin:0;font-size:14.5px;line-height:1.68;color:var(--text-body)">Consultorias, diagnósticos e jornadas para organizações que precisam transformar não apenas processos, mas também a forma como se relacionam, decidem e evoluem.</p>
-          <div style="margin-top:auto;padding-top:8px">
-            <x-import component-from-global-scope="EndoDesignSystem_7dc05a.Button" variant="ghost" size="sm" data-action="nav" data-target="contato" hint-size="auto,38px">Conversar sobre este desafio</x-import>
-          </div>
-        </article>
-
-        <article data-reveal="" data-hoverable="" style="display:flex;flex-direction:column;gap:16px;padding:26px;border-radius:20px;background:var(--endo-paper-100);box-shadow:var(--shadow-card);transition:box-shadow 280ms var(--ease-calm),transform 280ms var(--ease-calm)">
-          <x-import component-from-global-scope="EndoDesignSystem_7dc05a.ConceptIcon" concept="nagare" size="{{ 46 }}" hint-size="46px,46px"></x-import>
-          <div style="display:flex;flex-direction:column;gap:10px">
-            <h3 style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:20px;line-height:1.26;color:var(--endo-navy-800)">Consultoria para profissionais de RH</h3>
-            <p style="margin:0;font-size:14px;color:var(--endo-rose-500)">Para quem sustenta o desenvolvimento dos outros dentro da organização.</p>
-          </div>
-          <p style="margin:0;font-size:14.5px;line-height:1.68;color:var(--text-body)">Desenvolvimento voltado a profissionais de RH e HR Business Partners que desejam ocupar uma posição mais estratégica, fortalecer sua influência e construir soluções conectadas às necessidades do negócio.</p>
-          <div style="margin-top:auto;padding-top:8px">
-            <x-import component-from-global-scope="EndoDesignSystem_7dc05a.Button" variant="ghost" size="sm" data-action="nav" data-target="contato" hint-size="auto,38px">Conversar sobre este desafio</x-import>
-          </div>
-        </article>
-
-        <article data-reveal="" data-hoverable="" style="display:flex;flex-direction:column;gap:16px;padding:26px;border-radius:20px;background:var(--endo-paper-100);box-shadow:var(--shadow-card);transition:box-shadow 280ms var(--ease-calm),transform 280ms var(--ease-calm)">
-          <x-import component-from-global-scope="EndoDesignSystem_7dc05a.ConceptIcon" concept="ikigai" size="{{ 46 }}" hint-size="46px,46px"></x-import>
-          <div style="display:flex;flex-direction:column;gap:10px">
-            <h3 style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:20px;line-height:1.26;color:var(--endo-navy-800)">Mentorias e processos individuais</h3>
-            <p style="margin:0;font-size:14px;color:var(--endo-rose-500)">Para quem está diante de uma escolha, uma virada ou um recomeço.</p>
-          </div>
-          <p style="margin:0;font-size:14.5px;line-height:1.68;color:var(--text-body)">Um espaço de reflexão e desenvolvimento para pessoas e lideranças que atravessam momentos de escolha, mudança, crescimento ou redefinição de caminhos.</p>
-          <div style="margin-top:auto;padding-top:8px">
-            <x-import component-from-global-scope="EndoDesignSystem_7dc05a.Button" variant="ghost" size="sm" data-action="nav" data-target="contato" hint-size="auto,38px">Conversar sobre este desafio</x-import>
-          </div>
-        </article>
-
-        <article data-reveal="" data-hoverable="" style="display:flex;flex-direction:column;gap:16px;padding:26px;border-radius:20px;background:var(--endo-cream-300);box-shadow:var(--shadow-card);transition:box-shadow 280ms var(--ease-calm),transform 280ms var(--ease-calm)">
-          <x-import component-from-global-scope="EndoDesignSystem_7dc05a.ConceptIcon" concept="enso" size="{{ 46 }}" hint-size="46px,46px"></x-import>
-          <div style="display:flex;flex-direction:column;gap:10px">
-            <h3 style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:20px;line-height:1.26;color:var(--endo-navy-800)">Jornada à Origem</h3>
-            <p style="margin:0;font-size:14px;color:var(--endo-rose-500)">Para quem deseja voltar à origem e seguir com mais clareza.</p>
-          </div>
-          <p style="margin:0;font-size:14.5px;line-height:1.68;color:var(--text-body)">Um acompanhamento mais aprofundado, conduzido a partir da escuta clínica de Fabiana. Uma travessia para reconhecer a própria história, compreender o que se repete e reencontrar o centro antes de seguir.</p>
-          <div style="margin-top:auto;padding-top:8px">
-            <x-import component-from-global-scope="EndoDesignSystem_7dc05a.Button" variant="ghost" size="sm" data-action="nav" data-target="contato" hint-size="auto,38px">Conhecer a Jornada</x-import>
-          </div>
-        </article>
-
-      </div>
-    </div>
+      </div></div>
   </section>
 
-  <section id="cases" style="scroll-margin-top:96px;padding:clamp(72px,10vw,160px) var(--page-margin);background:var(--endo-paper-100)">
-    <div style="max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(36px,4vw,56px)">
-      <div data-reveal="" style="display:flex;flex-direction:column;gap:20px;max-width:58ch">
-        <x-import component-from-global-scope="EndoDesignSystem_7dc05a.SectionLabel" hint-size="auto,16px">Cases</x-import>
-        <h2 style="margin: 0; font-family: var(--font-sans); font-weight: 300; font-size: clamp(28px,3.2vw,44px); line-height: 1.22; letter-spacing: -0.01em; color: var(--endo-navy-800); width: 616px; height: 141px">Transformações que ganham forma no contexto real.</h2>
-        <p style="margin:0;font-size:17px;line-height:1.72;color:var(--text-body)">Cada trabalho parte de uma realidade diferente. Os caminhos não são replicados. São construídos a partir das pessoas, da cultura e dos desafios presentes em cada contexto.</p>
+  <section id="origem" style="position:relative;overflow:hidden;scroll-margin-top:96px;padding:clamp(72px,10vw,160px) var(--page-margin);background:var(--endo-cream-100)">
+    <img src="assets/marks/enso-cream.png" alt="" aria-hidden="true" style="position:absolute;right:-26%;top:-38%;width:min(1180px,92vw);height:auto;opacity:.62;pointer-events:none">
+    <div style="position:relative;max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(48px,6vw,84px)">
+
+      <div data-reveal="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:clamp(32px,5vw,72px);align-items:start">
+        <div style="display:flex;flex-direction:column;gap:24px;max-width:52ch">
+          <x-import component-from-global-scope="EndoDesignSystem_7dc05a.SectionLabel" hint-size="auto,16px">Por que Endo</x-import>
+          <h2 style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:clamp(30px,3.6vw,50px);line-height:1.18;letter-spacing:-0.015em;color:var(--endo-navy-800);max-width:18ch">Endo é o sobrenome da minha família materna.</h2>
+          <p style="margin:0;font-size:19px;line-height:1.6;color:var(--endo-navy-800)">Carrega ancestralidade, memória, <br>origem e pertencimento.</p>
+          <p style="margin:0;font-size:16.5px;line-height:1.78;color:var(--text-body)">Quando comecei a dar forma a este projeto, percebi que a escolha do nome era menos a criação de algo novo e mais um reencontro com algo que já existia: a minha própria história, a minha ancestralidade e uma maneira de trabalhar e compreender o desenvolvimento humano construída ao longo da vida.</p>
+          <p style="margin:0;font-size:16.5px;line-height:1.78;color:var(--text-body)">Endo também passou a representar um convite para olhar para dentro e voltar à origem.</p>
+        </div>
+        <div data-reveal="" style="display:flex;flex-direction:column;gap:22px;max-width:52ch;align-self:end">
+          <h3 style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:clamp(24px,2.6vw,34px);line-height:1.2;color:var(--endo-navy-800)">Ensō</h3>
+          <p style="margin:0;font-size:16.5px;line-height:1.78;color:var(--text-body)">O símbolo da Endo é inspirado no ensō, o círculo da tradição zen japonesa. Ele traduz presença, completude e movimento contínuo.</p>
+          <p style="margin:0;font-size:16.5px;line-height:1.78;color:var(--endo-navy-800)">Nome e símbolo contam, assim, uma mesma história: <strong style="font-weight:700">retornar à origem e permanecer em movimento.</strong></p>
+        </div>
       </div>
-      <div id="endo-case-filters" data-reveal="" role="group" aria-label="Filtrar cases" style="display:flex;flex-wrap:wrap;gap:10px">
-        <button data-filter="todos" style="padding:9px 18px;border-radius:999px;border:1px solid var(--endo-blue-500);background:var(--endo-blue-500);color:var(--endo-cream-100);font-family:var(--font-sans);font-size:13.5px;cursor:pointer;transition:background 160ms var(--ease-calm),color 160ms var(--ease-calm)">Todos</button>
-        <button data-filter="liderancas" style="padding:9px 18px;border-radius:999px;border:1px solid var(--border-cream);background:transparent;color:var(--endo-navy-800);font-family:var(--font-sans);font-size:13.5px;cursor:pointer;transition:background 160ms var(--ease-calm),color 160ms var(--ease-calm)">Lideranças</button>
-        <button data-filter="organizacoes" style="padding:9px 18px;border-radius:999px;border:1px solid var(--border-cream);background:transparent;color:var(--endo-navy-800);font-family:var(--font-sans);font-size:13.5px;cursor:pointer;transition:background 160ms var(--ease-calm),color 160ms var(--ease-calm)">Organizações</button>
-        <button data-filter="rh" style="padding:9px 18px;border-radius:999px;border:1px solid var(--border-cream);background:transparent;color:var(--endo-navy-800);font-family:var(--font-sans);font-size:13.5px;cursor:pointer;transition:background 160ms var(--ease-calm),color 160ms var(--ease-calm)">Profissionais de RH</button>
-        <button data-filter="mentorias" style="padding:9px 18px;border-radius:999px;border:1px solid var(--border-cream);background:transparent;color:var(--endo-navy-800);font-family:var(--font-sans);font-size:13.5px;cursor:pointer;transition:background 160ms var(--ease-calm),color 160ms var(--ease-calm)">Mentorias</button>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;align-items:start">
 
-        <article data-case="" data-cat="liderancas" data-reveal="" style="display:flex;flex-direction:column;gap:14px;padding:26px;border-radius:20px;background:var(--endo-cream-100);box-shadow:var(--shadow-card)">
-          
-          <div style="display:flex;flex-direction:column;gap:8px">
-            <span style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted)">Lideranças</span>
-            <h3 style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:19px;line-height:1.28;color:var(--endo-navy-800)">Desenvolvimento de lideranças</h3>
-          </div>
-          <p style="margin:0;font-size:14.5px;line-height:1.66;color:var(--text-body)"><strong style="font-weight:700;color:var(--endo-navy-800)">Contexto.</strong> Organização em processo de crescimento e reorganização de suas lideranças.</p>
-          <div data-case-panel="" style="display:none;flex-direction:column;gap:16px;padding-top:6px">
-            <p style="margin:0;font-size:14.5px;line-height:1.66;color:var(--text-body)"><strong style="font-weight:700;color:var(--endo-navy-800)">Desafio.</strong> Fortalecer o papel dos líderes, melhorar a qualidade das relações e ampliar a segurança para conversas difíceis.</p>
-            <p style="margin:0;font-size:14.5px;line-height:1.66;color:var(--text-body)"><strong style="font-weight:700;color:var(--endo-navy-800)">Caminho.</strong> Diagnóstico, encontros com lideranças, workshops, práticas de comunicação e acompanhamento do processo.</p>
-            <p style="margin:0;font-size:14.5px;line-height:1.66;color:var(--text-body)"><strong style="font-weight:700;color:var(--endo-navy-800)">Formatos.</strong> Inserir formatos utilizados.</p>
-            <p style="margin:0;font-size:14.5px;line-height:1.66;color:var(--text-body)"><strong style="font-weight:700;color:var(--endo-navy-800)">Impacto.</strong> Inserir apenas resultados comprovados e aprovados pela cliente.</p>
-          </div>
-          
-        </article>
-
-        <article data-case="" data-cat="organizacoes" data-reveal="" style="display:flex;flex-direction:column;gap:14px;padding:26px;border-radius:20px;background:var(--endo-cream-100);box-shadow:var(--shadow-card)">
-          
-          <div style="display:flex;flex-direction:column;gap:8px">
-            <span style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted)">Organizações</span>
-            <h3 style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:19px;line-height:1.28;color:var(--endo-navy-800)">Cultura e gestão de mudanças</h3>
-          </div>
-          <p style="margin:0;font-size:14.5px;line-height:1.66;color:var(--text-body)"><strong style="font-weight:700;color:var(--endo-navy-800)">Contexto.</strong> Inserir o contexto real da organização, sem dados confidenciais.</p>
-          <div data-case-panel="" style="display:none;flex-direction:column;gap:16px;padding-top:6px">
-            <p style="margin:0;font-size:14.5px;line-height:1.66;color:var(--text-body)"><strong style="font-weight:700;color:var(--endo-navy-800)">Desafio.</strong> Inserir o desafio identificado no diagnóstico.</p>
-            <p style="margin:0;font-size:14.5px;line-height:1.66;color:var(--text-body)"><strong style="font-weight:700;color:var(--endo-navy-800)">Caminho.</strong> Inserir o processo desenvolvido.</p>
-            <p style="margin:0;font-size:14.5px;line-height:1.66;color:var(--text-body)"><strong style="font-weight:700;color:var(--endo-navy-800)">Formatos.</strong> Inserir formatos utilizados.</p>
-            <p style="margin:0;font-size:14.5px;line-height:1.66;color:var(--text-body)"><strong style="font-weight:700;color:var(--endo-navy-800)">Impacto.</strong> Inserir apenas resultados comprovados e aprovados pela cliente.</p>
-          </div>
-          
-        </article>
-
-        <article data-case="" data-cat="rh" data-reveal="" style="display:flex;flex-direction:column;gap:14px;padding:26px;border-radius:20px;background:var(--endo-cream-100);box-shadow:var(--shadow-card)">
-          
-          <div style="display:flex;flex-direction:column;gap:8px">
-            <span style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted)">Profissionais de RH</span>
-            <h3 style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:19px;line-height:1.28;color:var(--endo-navy-800)">Atuação estratégica de RH</h3>
-          </div>
-          <p style="margin:0;font-size:14.5px;line-height:1.66;color:var(--text-body)"><strong style="font-weight:700;color:var(--endo-navy-800)">Contexto.</strong> Inserir o contexto real da área ou do time de RH.</p>
-          <div data-case-panel="" style="display:none;flex-direction:column;gap:16px;padding-top:6px">
-            <p style="margin:0;font-size:14.5px;line-height:1.66;color:var(--text-body)"><strong style="font-weight:700;color:var(--endo-navy-800)">Desafio.</strong> Inserir o desafio identificado.</p>
-            <p style="margin:0;font-size:14.5px;line-height:1.66;color:var(--text-body)"><strong style="font-weight:700;color:var(--endo-navy-800)">Caminho.</strong> Inserir o processo desenvolvido.</p>
-            <p style="margin:0;font-size:14.5px;line-height:1.66;color:var(--text-body)"><strong style="font-weight:700;color:var(--endo-navy-800)">Formatos.</strong> Inserir formatos utilizados.</p>
-            <p style="margin:0;font-size:14.5px;line-height:1.66;color:var(--text-body)"><strong style="font-weight:700;color:var(--endo-navy-800)">Impacto.</strong> Inserir apenas resultados comprovados e aprovados.</p>
-          </div>
-          
-        </article>
-
-        <article data-case="" data-cat="mentorias" data-reveal="" style="display:flex;flex-direction:column;gap:14px;padding:26px;border-radius:20px;background:var(--endo-cream-100);box-shadow:var(--shadow-card)">
-          
-          <div style="display:flex;flex-direction:column;gap:8px">
-            <span style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted)">Mentorias</span>
-            <h3 style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:19px;line-height:1.28;color:var(--endo-navy-800)">Transição e escolha de caminho</h3>
-          </div>
-          <p style="margin:0;font-size:14.5px;line-height:1.66;color:var(--text-body)"><strong style="font-weight:700;color:var(--endo-navy-800)">Contexto.</strong> Inserir o contexto real do processo individual, com autorização.</p>
-          <div data-case-panel="" style="display:none;flex-direction:column;gap:16px;padding-top:6px">
-            <p style="margin:0;font-size:14.5px;line-height:1.66;color:var(--text-body)"><strong style="font-weight:700;color:var(--endo-navy-800)">Desafio.</strong> Inserir o desafio trazido.</p>
-            <p style="margin:0;font-size:14.5px;line-height:1.66;color:var(--text-body)"><strong style="font-weight:700;color:var(--endo-navy-800)">Caminho.</strong> Inserir o processo desenvolvido.</p>
-            <p style="margin:0;font-size:14.5px;line-height:1.66;color:var(--text-body)"><strong style="font-weight:700;color:var(--endo-navy-800)">Movimentos.</strong> Inserir principais movimentos ou aprendizados.</p>
-            <p style="margin:0;font-size:14.5px;line-height:1.66;color:var(--text-body)"><strong style="font-weight:700;color:var(--endo-navy-800)">Impacto.</strong> Inserir apenas o que foi aprovado pela pessoa.</p>
-          </div>
-          
-        </article>
-
-      </div>
       
+
+      <div data-reveal="" style="display:flex;flex-direction:column;gap:16px;align-items:flex-start;padding-top:clamp(32px,4vw,52px);border-top:1px solid rgba(60,83,124,.22)">
+        <span style="font-size:15px;line-height:1.7;color:var(--text-muted)">É desse encontro que nasce a frase que traduz a essência da marca:</span>
+        <p style="margin:0;font-family:var(--font-script);font-size:clamp(38px,5.4vw,66px);line-height:1.05;color:var(--endo-rose-500)">Toda transformação começa por dentro.</p>
+      </div>
+
     </div>
   </section>
 
-  <section id="depoimentos" style="scroll-margin-top:96px;padding:clamp(72px,10vw,160px) var(--page-margin);background:var(--endo-cream-100)">
-    <div style="max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(36px,4vw,56px)">
-      <div data-reveal="" style="display:flex;flex-direction:column;gap:18px">
-        <x-import component-from-global-scope="EndoDesignSystem_7dc05a.SectionLabel" hint-size="auto,16px">Depoimentos</x-import>
-        <h2 style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:clamp(28px,3.2vw,44px);line-height:1.22;letter-spacing:-0.01em;color:var(--endo-navy-800)">O que permanece depois do processo.</h2>
+  <section id="conceitos" style="scroll-margin-top:96px;padding:clamp(72px,10vw,160px) var(--page-margin);background:var(--endo-paper-100)">
+    <div style="max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(40px,5vw,64px)">
+      <div data-reveal="" style="display:flex;flex-direction:column;gap:20px;max-width:58ch">
+        <x-import component-from-global-scope="EndoDesignSystem_7dc05a.SectionLabel" hint-size="auto,16px">Conceitos que nos inspiram</x-import>
+        <p style="margin:0;font-size:16.5px;line-height:1.78;color:var(--text-body)">Alguns conceitos japoneses encontram ressonância na filosofia da Endo e ajudam a dar linguagem aos princípios que orientam nossa forma de compreender o desenvolvimento humano.</p>
       </div>
-      <div data-reveal="" aria-roledescription="carrossel" aria-label="Depoimentos" style="display:flex;flex-direction:column;gap:32px;min-height:280px">
-        <div data-slide="" style="display:flex;flex-direction:column;gap:22px" role="group" aria-label="Depoimento 1 de 3">
-          <x-import component-from-global-scope="EndoDesignSystem_7dc05a.Quote" tone="strong" size="{{ 28 }}" hint-size="100%,140px">Depoimento aprovado será inserido aqui.</x-import>
-          <div style="display:flex;flex-direction:column;gap:4px">
-            <span style="font-size:15px;font-weight:700;color:var(--endo-navy-800)">Nome</span>
-            <span style="font-size:14px;color:var(--text-muted)">Cargo · Empresa ou contexto</span>
-          </div>
-        </div>
-        <div data-slide="" style="display:none;flex-direction:column;gap:22px" role="group" aria-label="Depoimento 2 de 3">
-          <x-import component-from-global-scope="EndoDesignSystem_7dc05a.Quote" tone="strong" size="{{ 28 }}" hint-size="100%,140px">Depoimento aprovado será inserido aqui.</x-import>
-          <div style="display:flex;flex-direction:column;gap:4px">
-            <span style="font-size:15px;font-weight:700;color:var(--endo-navy-800)">Nome</span>
-            <span style="font-size:14px;color:var(--text-muted)">Cargo · Empresa ou contexto</span>
-          </div>
-        </div>
-        <div data-slide="" style="display:none;flex-direction:column;gap:22px" role="group" aria-label="Depoimento 3 de 3">
-          <x-import component-from-global-scope="EndoDesignSystem_7dc05a.Quote" tone="strong" size="{{ 28 }}" hint-size="100%,140px">Depoimento aprovado será inserido aqui.</x-import>
-          <div style="display:flex;flex-direction:column;gap:4px">
-            <span style="font-size:15px;font-weight:700;color:var(--endo-navy-800)">Nome</span>
-            <span style="font-size:14px;color:var(--text-muted)">Cargo · Empresa ou contexto</span>
-          </div>
-        </div>
-        <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:24px;border-top:1px solid var(--border-soft)">
-          <div style="display:flex;gap:10px" role="tablist" aria-label="Escolher depoimento">
-            <button data-dot="0" aria-label="Depoimento 1" style="width:9px;height:9px;padding:0;border:0;border-radius:999px;background:var(--endo-blue-500);cursor:pointer;transition:background 160ms var(--ease-calm)"></button>
-            <button data-dot="1" aria-label="Depoimento 2" style="width:9px;height:9px;padding:0;border:0;border-radius:999px;background:rgba(60,83,124,.25);cursor:pointer;transition:background 160ms var(--ease-calm)"></button>
-            <button data-dot="2" aria-label="Depoimento 3" style="width:9px;height:9px;padding:0;border:0;border-radius:999px;background:rgba(60,83,124,.25);cursor:pointer;transition:background 160ms var(--ease-calm)"></button>
-          </div>
-          <div style="display:flex;gap:10px">
-            <button data-action="slide-prev" aria-label="Depoimento anterior" style="width:46px;height:46px;border-radius:999px;border:1px solid var(--border-cream);background:transparent;color:var(--endo-blue-500);font-size:16px;cursor:pointer">←</button>
-            <button data-action="slide-next" aria-label="Próximo depoimento" style="width:46px;height:46px;border-radius:999px;border:1px solid var(--border-cream);background:transparent;color:var(--endo-blue-500);font-size:16px;cursor:pointer">→</button>
-          </div>
-        </div>
-        <p style="margin:0;font-size:13.5px;color:var(--text-muted)">Depoimentos fictícios não foram gerados. Cada espaço aguarda fala, nome, cargo e contexto autorizados.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(150px,100%),1fr));gap:24px">
+        <div data-reveal="" style="display:flex;flex-direction:column;gap:14px"><img src="assets/icons/frente-sunao.png" alt="" aria-hidden="true" style="display:block;width:64px;height:64px"><h3 style="margin:0;font-family:var(--font-sans);font-weight:400;font-size:20px;color:var(--endo-navy-800)">Sunao</h3><p style="margin:0;font-size:15.5px;line-height:1.72;color:var(--text-body)">Abertura, receptividade, humildade e honestidade.</p></div>
+        <div data-reveal="" style="display:flex;flex-direction:column;gap:14px"><img src="assets/icons/frente-makoto.png" alt="" aria-hidden="true" style="display:block;width:64px;height:64px"><h3 style="margin:0;font-family:var(--font-sans);font-weight:400;font-size:20px;color:var(--endo-navy-800)">Makoto</h3><p style="margin:0;font-size:15.5px;line-height:1.72;color:var(--text-body)">Verdade, sinceridade, integridade e coerência.</p></div>
+        <div data-reveal="" style="display:flex;flex-direction:column;gap:14px"><img src="assets/icons/frente-ikigai.png" alt="" aria-hidden="true" style="display:block;width:64px;height:64px"><h3 style="margin:0;font-family:var(--font-sans);font-weight:400;font-size:20px;color:var(--endo-navy-800)">Ikigai</h3><p style="margin:0;font-size:15.5px;line-height:1.72;color:var(--text-body)">Sentido e direção.</p></div>
+        <div data-reveal="" style="display:flex;flex-direction:column;gap:14px"><img src="assets/icons/frente-nagare.png" alt="" aria-hidden="true" style="display:block;width:64px;height:64px;border-radius:999px;box-shadow:0 0 0 1px rgba(60,83,124,.18)"><h3 style="margin:0;font-family:var(--font-sans);font-weight:400;font-size:20px;color:var(--endo-navy-800)">Nagare</h3><p style="margin:0;font-size:15.5px;line-height:1.72;color:var(--text-body)">Fluxo e respeito aos ciclos.</p></div>
+        <div data-reveal="" style="display:flex;flex-direction:column;gap:14px"><img src="assets/icons/frente-enso.png" alt="" aria-hidden="true" style="display:block;width:64px;height:64px"><h3 style="margin:0;font-family:var(--font-sans);font-weight:400;font-size:20px;color:var(--endo-navy-800)">Ensō</h3><p style="margin:0;font-size:15.5px;line-height:1.72;color:var(--text-body)">Presença, integração e movimento contínuo.</p></div>
+      </div>
+      <p data-reveal="" style="margin:0;max-width:60ch;font-size:16.5px;line-height:1.78;color:var(--text-muted);padding-top:28px;border-top:1px solid var(--border-soft)">Eles não formam um método. São referências que dialogam com a identidade da Endo e com a maneira como escolhemos estar presentes em cada processo.</p>
+    </div>
+  </section>
+
+  <section id="depoimentos" style="position:relative;overflow:hidden;scroll-margin-top:96px;padding:clamp(72px,10vw,160px) var(--page-margin);background:var(--endo-cream-300)">
+    
+    <div style="position:relative;max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(56px,8vw,120px)">
+      <div data-reveal="" style="display:flex;flex-direction:column;gap:20px;max-width:46ch">
+        <h2 style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:clamp(30px,3.6vw,50px);line-height:1.18;letter-spacing:-0.015em;color:var(--endo-navy-800);max-width:16ch">Vozes sobre essa trajetória</h2>
+        <p style="margin:0;font-size:16.5px;line-height:1.78;color:var(--text-body)">Pessoas que trabalharam com Fabiana ao longo de sua carreira.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(272px,100%),1fr));gap:clamp(32px,4vw,60px)">
+        <figure data-reveal="" style="margin:0;display:flex;flex-direction:column;gap:22px;padding-top:28px;border-top:1px solid rgba(60,83,124,.22)">
+          <blockquote style="margin:0;font-size:15.5px;font-style:italic;line-height:1.74;color:var(--text-body);text-wrap:pretty">“Fabiana é uma profissional que se destaca pela forte visão estratégica e pela sua capacidade de entrega. Orientada à solução, consegue equilibrar as necessidades do negócio com uma abordagem humana e empática. Sua parceria foi fundamental para o desenvolvimento do time, para fortalecer a cultura corporativa e as melhores práticas de gestão.”</blockquote>
+          <figcaption style="display:flex;align-items:center;gap:14px;margin-top:auto;padding-top:20px;border-top:1px solid rgba(60,83,124,.22)">
+            <img src="assets/photos/depoimento-gil.png" alt="Gil Kassow" loading="lazy" style="display:block;flex:none;width:58px;height:58px;border-radius:999px;object-fit:cover;object-position:50% 22%;box-shadow:0 0 0 1px rgba(60,83,124,.14)">
+            <span style="display:flex;flex-direction:column;gap:3px">
+              <span style="font-size:15px;font-weight:700;color:var(--endo-rose-500)">Gil Kassow</span>
+              <span style="font-size:13.5px;font-style:italic;line-height:1.5;color:var(--text-muted)">Internal Controls, Ethics &amp; Integrity,<br>Regulatory Compliance Manager | Porto</span>
+            </span>
+          </figcaption>
+        </figure>
+        <figure data-reveal="" style="margin:0;display:flex;flex-direction:column;gap:22px;padding-top:28px;border-top:1px solid rgba(60,83,124,.22)">
+          <blockquote style="margin:0;font-size:15.5px;font-style:italic;line-height:1.74;color:var(--text-body);text-wrap:pretty">“Para mim, é um privilégio ter a Fabiana como parceira nos projetos que desenvolvemos juntos. Sua experiência com processos de desenvolvimento de pessoas, equipes e organizações, somada à sua sensibilidade e profundidade, eleva substancialmente o padrão de qualidade das nossas entregas. A capacidade de fazer provocações precisas aliada a uma empatia genuína são marcas registradas da Fabiana — características que a tornam uma consultora excepcional e constantemente elogiada pelos clientes.”</blockquote>
+          <figcaption style="display:flex;align-items:center;gap:14px;margin-top:auto;padding-top:20px;border-top:1px solid rgba(60,83,124,.22)">
+            <img src="assets/photos/depoimento-bruno.png" alt="Bruno Severo Oliveira" loading="lazy" style="display:block;flex:none;width:58px;height:58px;border-radius:999px;object-fit:cover;object-position:50% 22%;box-shadow:0 0 0 1px rgba(60,83,124,.14)">
+            <span style="display:flex;flex-direction:column;gap:3px">
+              <span style="font-size:15px;font-weight:700;color:var(--endo-rose-500)">Bruno Severo Oliveira</span>
+              <span style="font-size:13.5px;font-style:italic;line-height:1.5;color:var(--text-muted)">Head da AB&amp;M Desenvolvimento</span>
+            </span>
+          </figcaption>
+        </figure>
+        <figure data-reveal="" style="margin:0;display:flex;flex-direction:column;gap:22px;padding-top:28px;border-top:1px solid rgba(60,83,124,.22)">
+          <blockquote style="margin:0;font-size:15.5px;font-style:italic;line-height:1.74;color:var(--text-body);text-wrap:pretty">“Fabiana apresenta três competências essenciais para uma profissional de Humanas. São elas: Profundidade, Foco e Sensibilidade. Cada uma delas em si é fundamental. Quando juntas, trazem a credibilidade que a torna uma parceira inestimável. Oferece a confiança e um enorme prazer em estar junto.”</blockquote>
+          <figcaption style="display:flex;align-items:center;gap:14px;margin-top:auto;padding-top:20px;border-top:1px solid rgba(60,83,124,.22)">
+            <img src="assets/photos/depoimento-meire.png" alt="Meire Beraldo" loading="lazy" style="display:block;flex:none;width:58px;height:58px;border-radius:999px;object-fit:cover;object-position:50% 22%;box-shadow:0 0 0 1px rgba(60,83,124,.14)">
+            <span style="display:flex;flex-direction:column;gap:3px">
+              <span style="font-size:15px;font-weight:700;color:var(--endo-rose-500)">Meire Beraldo</span>
+              <span style="font-size:13.5px;font-style:italic;line-height:1.5;color:var(--text-muted)">Consultora de Desenvolvimento Humano<br>e Organizacional | EcoSocial</span>
+            </span>
+          </figcaption>
+        </figure>
       </div>
     </div>
   </section>
 
   <section id="contato" style="position:relative;overflow:hidden;scroll-margin-top:96px;padding:clamp(72px,10vw,150px) var(--page-margin);background:var(--endo-rose-500)">
-    <div style="position:relative;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(40px,6vw,88px);align-items:start">
+    <div style="position:relative;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:clamp(40px,6vw,88px);align-items:start">
       <div data-reveal="" style="display:flex;flex-direction:column;gap:24px;max-width:46ch">
         <span style="display:inline-block;font-family:var(--font-sans);font-weight:700;font-size:12px;letter-spacing:.10em;color:var(--endo-cream-100)">· Contato</span>
-        <h2 style="margin: 0; font-family: var(--font-sans); font-weight: 300; font-size: clamp(28px,3.2vw,44px); line-height: 1.22; letter-spacing: -0.01em; color: var(--endo-cream-100); width: 342px; height: 159px">Talvez o primeiro movimento seja uma conversa.</h2>
-        <p style="margin:0;font-size:16.5px;line-height:1.72;color:rgba(255,253,237,.86)">Conte um pouco sobre o momento que você, sua liderança ou sua organização está atravessando. A partir dessa escuta inicial, podemos compreender se e como a endo pode acompanhar esse processo.</p>
-        <div style="display:flex;flex-direction:column;gap:12px;margin-top:8px;padding-top:26px;border-top:1px solid rgba(255,253,237,.32)">
-          <span data-placeholder-badge="" style="align-self:flex-start;padding:6px 12px;border-radius:999px;background:rgba(255,253,237,.18);font-size:12px;letter-spacing:.06em;color:var(--endo-cream-100)">Dados de contato a confirmar</span>
-          <p style="margin:0;font-size:15px;line-height:1.72;color:rgba(255,253,237,.86)">E-mail, LinkedIn, WhatsApp e modelo de atendimento serão exibidos aqui após confirmação. Nada foi publicado sem aprovação.</p>
+        <h2 style="margin: 0; font-family: var(--font-sans); font-weight: 300; font-size: clamp(28px,3.2vw,44px); line-height: 1.22; letter-spacing: -0.01em; color: var(--endo-cream-100); max-width: 22ch">Talvez o primeiro movimento seja uma conversa.</h2>
+        <p style="margin:0;font-size:16.5px;line-height:1.78;color:rgba(255,253,237,.86)">Se alguma questão, desafio ou possibilidade trouxe você até aqui, podemos começar compreendendo melhor o que está acontecendo e o que pode fazer sentido a partir daí.</p>
+        <div style="display:flex;flex-direction:column;gap:2px;margin-top:8px;padding-top:22px;border-top:1px solid rgba(255,253,237,.32)">
+          <a href="mailto:fabiana@endodesenvolvimento.com.br" style="display:flex;align-items:center;gap:14px;padding:10px 0;font-size:15.5px;color:var(--endo-cream-100);transition:opacity 160ms var(--ease-calm)" style-hover="opacity:.75">
+            <svg viewBox="0 0 48 48" aria-hidden="true" style="flex:0 0 auto;width:24px;height:24px;display:block;fill:none;stroke:#EAE3D1;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><circle cx="24" cy="24" r="21.9"></circle><rect x="13.5" y="18" width="21" height="13.4" rx="1.6"></rect><path d="m14.4 19 9.6 7.2 9.6-7.2"></path></svg>
+            fabiana@endodesenvolvimento.com.br
+          </a>
+          <a href="https://wa.me/5511997811359" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:14px;padding:10px 0;font-size:15.5px;color:var(--endo-cream-100);transition:opacity 160ms var(--ease-calm)" style-hover="opacity:.75">
+            <img src="assets/icons/social-whatsapp.png" alt="" aria-hidden="true" style="flex:0 0 auto;width:24px;height:24px;display:block">
+            +55 (11) 99781-1359
+          </a>
+          <a href="https://www.linkedin.com/in/fabiana-domingues/" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:14px;padding:10px 0;font-size:15.5px;color:var(--endo-cream-100);transition:opacity 160ms var(--ease-calm)" style-hover="opacity:.75">
+            <img src="assets/icons/social-linkedin.png" alt="" aria-hidden="true" style="flex:0 0 auto;width:24px;height:24px;display:block">
+            Fabiana Domingues
+          </a>
+          <a href="https://www.instagram.com/endodesenvolvimento" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:14px;padding:10px 0;font-size:15.5px;color:var(--endo-cream-100);transition:opacity 160ms var(--ease-calm)" style-hover="opacity:.75">
+            <img src="assets/icons/social-instagram.png" alt="" aria-hidden="true" style="flex:0 0 auto;width:24px;height:24px;display:block">
+            @endodesenvolvimento
+          </a>
         </div>
+
       </div>
       <div data-reveal="">
         <form id="endo-form" novalidate="" style="display:flex;flex-direction:column;gap:18px;padding:clamp(28px,3vw,40px);border-radius:24px;background:var(--endo-cream-100);border:1px solid var(--border-cream);box-shadow:var(--shadow-card)">
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:18px">
             <div>
               <x-import component-from-global-scope="EndoDesignSystem_7dc05a.Input" tone="light" label="Nome" name="nome" autocomplete="name" hint-size="100%,72px"></x-import>
               <span data-err="nome" role="alert" style="display:none;margin-top:6px;font-size:13.5px;color:var(--endo-wine-600)">Por favor, informe seu nome.</span>
@@ -421,44 +393,47 @@ a:hover{color:#8E5F63}
           </div>
           <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:8px">
             <x-import component-from-global-scope="EndoDesignSystem_7dc05a.Button" variant="primary" size="lg" data-action="submit" hint-size="auto,54px">Vamos conversar</x-import>
-            <span style="font-size:13px;color:var(--text-muted)">Retorno em até dois dias úteis.</span>
+            <span style="font-size:13px;color:var(--text-muted)">Abre uma conversa no WhatsApp. Retorno em até dois dias úteis.</span>
           </div>
         </form>
         <div id="endo-form-success" role="status" style="display:none;flex-direction:column;gap:14px;padding:clamp(28px,3vw,40px);border-radius:24px;background:var(--endo-cream-100);border:1px solid var(--border-cream);box-shadow:var(--shadow-card)">
-          <p style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:26px;line-height:1.26;color:var(--endo-navy-800)">Recebemos sua mensagem.</p>
-          <p style="margin:0;font-size:16px;line-height:1.72;color:var(--text-body)">Obrigada por compartilhar esse momento. O retorno acontece em até dois dias úteis, com calma e atenção ao que você escreveu.</p>
-          <p style="margin:0;font-size:13px;color:var(--text-muted)">Formulário preparado para integração posterior com e-mail, CRM ou automação.</p>
+          <p style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:26px;line-height:1.26;color:var(--endo-navy-800)">Sua mensagem está pronta no WhatsApp.</p>
+          <p style="margin:0;font-size:16px;line-height:1.72;color:var(--text-body)">Abrimos uma conversa com a Fabiana já com tudo preenchido. Basta enviar e o retorno acontece em até dois dias úteis, com calma e atenção ao que você escreveu.</p>
+          <a id="endo-form-wa-link" href="https://wa.me/5511997811359" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;align-self:flex-start;padding:14px 28px;border-radius:999px;font-size:15.5px;color:var(--endo-cream-100);background:var(--endo-navy-800);transition:background 160ms var(--ease-calm)">Abrir a conversa no WhatsApp</a>
+          <p style="margin:0;font-size:13px;color:var(--text-muted)">Se a conversa não abrir, chame no <a href="https://wa.me/5511997811359" target="_blank" rel="noopener" style="color:var(--endo-rose-500)">WhatsApp</a> ou escreva para <a href="mailto:fabiana@endodesenvolvimento.com.br" style="color:var(--endo-rose-500)">fabiana@endodesenvolvimento.com.br</a>.</p>
         </div>
       </div>
     </div>
   </section>
 
-</main>
+<div aria-hidden="true" style="position:absolute;left:0;right:0;top:0;height:min(851px,70vh);pointer-events:none;background:linear-gradient(180deg,rgba(16,41,69,.5) 0%,rgba(16,41,69,0) 32%)"></div></main>
 
-<footer style="position:relative;overflow:hidden;padding:clamp(56px,7vw,96px) var(--page-margin) 40px;background:var(--endo-navy-900)">
-  <img src="assets/marks/enso-o-cream.png" alt="" aria-hidden="true" style="position: absolute; width: 684px; height: 671px; opacity: .08; pointer-events: none; left: 1084px; top: 51px">
+<footer id="endo-footer" style="position:relative;overflow:hidden;padding:clamp(56px,7vw,96px) var(--page-margin) 40px;background:var(--endo-navy-900)">
+  <img id="endo-footer-enso" src="assets/marks/enso-rodape-cream.png" alt="" aria-hidden="true" style="position:absolute;right:-16%;top:-8%;width:min(900px,92vw);height:auto;opacity:.08;pointer-events:none">
+  
   <div style="position:relative;max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(36px,4vw,56px)">
-    <div style="display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 40px; align-items: start; position: relative">
-      <div style="display:flex;flex-direction:column;align-items:flex-start;gap:22px">
-        
-        
-      <p style="margin: 0; font-family: var(--font-script); font-size: 34px; line-height: 1.1; color: var(--endo-rose-300)">Toda transformação <br>começa por dentro.</p></div>
-      <nav aria-label="Navegação do rodapé" style="display:flex;flex-direction:column;gap:12px">
+    <div id="endo-footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit,minmax(min(220px,100%),1fr)); gap: 40px; align-items: start; position: relative">
+      <div id="endo-footer-brand" style="display:flex;flex-direction:column;align-items:flex-start;gap:22px">
+        <img id="endo-footer-mark" src="assets/marks/endo-animacao-recorte.gif" alt="Marca Endo em movimento" style="display:block;width:min(230px,80%);height:auto;pointer-events:none">
+      <p id="endo-footer-claim" style="margin: 0; font-family: var(--font-script); font-size: 34px; line-height: 1.1; color: var(--endo-cream-300)">Toda transformação <br>começa por dentro.</p></div>
+      <nav id="endo-footer-nav" aria-label="Navegação do rodapé" style="display:flex;flex-direction:column;gap:12px">
         <a href="#sobre" data-action="nav" data-target="sobre" style="font-size:15px;color:rgba(234,227,209,.78)">Sobre</a>
-        <a href="#fabiana" data-action="nav" data-target="fabiana" style="font-size:15px;color:rgba(234,227,209,.78)">Fabiana Domingues</a>
-        <a href="#servicos" data-action="nav" data-target="servicos" style="font-size:15px;color:rgba(234,227,209,.78)">Serviços</a>
-        <a href="#cases" data-action="nav" data-target="cases" style="font-size:15px;color:rgba(234,227,209,.78)">Cases</a>
-        <a href="#depoimentos" data-action="nav" data-target="depoimentos" style="font-size:15px;color:rgba(234,227,209,.78)">Depoimentos</a>
+        <a href="#servicos" data-action="nav" data-target="servicos" style="font-size:15px;color:rgba(234,227,209,.78)">Como ajudamos</a>
+        <a href="#jeito" data-action="nav" data-target="jeito" style="font-size:15px;color:rgba(234,227,209,.78)">O jeito Endo</a>
+        <a href="#fabiana" data-action="nav" data-target="fabiana" style="font-size:15px;color:rgba(234,227,209,.78)">Fabiana</a>
+        <a href="#origem" data-action="nav" data-target="origem" style="font-size:15px;color:rgba(234,227,209,.78)">Por que Endo</a>
         <a href="#contato" data-action="nav" data-target="contato" style="font-size:15px;color:rgba(234,227,209,.78)">Contato</a>
       </nav>
-      <div style="display:flex;flex-direction:column;gap:12px">
+      <div id="endo-footer-links" style="display:flex;flex-direction:column;gap:12px">
         <span style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(234,227,209,.45)">Onde encontrar</span>
-        <a href="#" data-placeholder="" style="font-size:15px;color:rgba(234,227,209,.78)">LinkedIn <span style="font-size:12px;color:rgba(234,227,209,.45)">(inserir URL)</span></a>
-        <a href="#" data-placeholder="" style="font-size:15px;color:rgba(234,227,209,.78)">E-mail <span style="font-size:12px;color:rgba(234,227,209,.45)">(a confirmar)</span></a>
+        <a href="https://www.linkedin.com/in/fabiana-domingues/" target="_blank" rel="noopener" style="font-size:15px;color:rgba(234,227,209,.78)">LinkedIn</a>
+        <a href="https://www.instagram.com/endodesenvolvimento" target="_blank" rel="noopener" style="font-size:15px;color:rgba(234,227,209,.78)">Instagram</a>
+        <a href="mailto:fabiana@endodesenvolvimento.com.br" style="font-size:15px;color:rgba(234,227,209,.78)">fabiana@endodesenvolvimento.com.br</a>
+        <a href="https://wa.me/5511997811359" target="_blank" rel="noopener" style="font-size:15px;color:rgba(234,227,209,.78)">WhatsApp</a>
         <a href="#" data-placeholder="" style="font-size:15px;color:rgba(234,227,209,.78)">Política de privacidade</a>
       </div>
-    <img src="assets/marks/endo-animado.gif" alt="Marca endo em movimento" style="position: absolute; width: 501px; height: 280px; pointer-events: none; left: -144px; top: 22px"></div>
-    <div style="display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between;padding-top:26px;border-top:1px solid rgba(234,227,209,.16)">
+    </div>
+    <div id="endo-footer-meta" style="display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between;padding-top:26px;border-top:1px solid rgba(234,227,209,.16)">
       <span style="font-size:13px;color:rgba(234,227,209,.5)">© 2026 Endo — Desenvolvimento Humano.</span>
       <span style="font-size:13px;color:rgba(234,227,209,.5)">Criado por Ecco Criativo</span>
     </div>
@@ -466,18 +441,18 @@ a:hover{color:#8E5F63}
 </footer>
 
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;mostrarFiltrosCases&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Cases&quot;},&quot;sinalizarPlaceholders&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Cases&quot;},&quot;imagemDoHero&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;direita&quot;,&quot;esquerda&quot;],&quot;default&quot;:&quot;direita&quot;,&quot;tsType&quot;:&quot;'direita' | 'esquerda'&quot;,&quot;section&quot;:&quot;Hero&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;whatsappNumero&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;5511997811359&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Formulário&quot;},&quot;mostrarFiltrosCases&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Cases&quot;},&quot;sinalizarPlaceholders&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Cases&quot;},&quot;imagemDoHero&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;direita&quot;,&quot;esquerda&quot;],&quot;default&quot;:&quot;direita&quot;,&quot;tsType&quot;:&quot;'direita' | 'esquerda'&quot;,&quot;section&quot;:&quot;Hero&quot;}}">
 class Component extends DCLogic {
   renderVals() {
     return {
       frentes: [
         { value: '', label: 'Selecione uma frente' },
-        { value: 'liderancas', label: 'Programa de Liderança' },
-        { value: 'organizacional', label: 'Desenvolvimento organizacional' },
-        { value: 'rh', label: 'Consultoria para profissionais de RH' },
-        { value: 'mentoria', label: 'Mentoria individual' },
-        { value: 'jornada', label: 'Jornada à Origem' },
-        { value: 'workshops', label: 'Workshops e jornadas' },
+        { value: 'mentoria', label: 'Mentoria & Coaching' },
+        { value: 'liderancas', label: 'Desenvolvimento de Lideranças' },
+        { value: 'organizacional', label: 'Desenvolvimento Organizacional' },
+        { value: 'assessoria', label: 'Assessoria Estratégica em Pessoas e Organização' },
+        { value: 'clinica', label: 'Clínica da Liderança' },
+        { value: 'nao-sei', label: 'Ainda não sei — prefiro conversar primeiro.' },
         { value: 'outro', label: 'Outro' }
       ]
     };
@@ -529,8 +504,10 @@ class Component extends DCLogic {
     h.style.padding = on ? '10px var(--page-margin)' : '16px var(--page-margin)';
     const logo = document.getElementById('endo-header-logo');
     if (logo) {
-      const want = on ? 'assets/logos/endo-lockup-blue.svg' : 'assets/logos/endo-lockup-cream.svg';
-      if (!logo.getAttribute('src').endsWith(want.split('/').pop())) logo.setAttribute('src', want);
+      logo.style.transition = 'opacity 420ms var(--ease-calm), transform 420ms var(--ease-calm)';
+      logo.style.opacity = on ? '0' : '1';
+      logo.style.transform = on ? 'translateY(-6px)' : 'none';
+      logo.style.pointerEvents = on ? 'none' : 'auto';
     }
     g.style.background = on ? 'rgba(255,253,237,.62)' : 'rgba(255,253,237,.30)';
     const filter = on ? 'blur(22px) saturate(185%)' : 'blur(14px) saturate(170%)';
@@ -543,10 +520,72 @@ class Component extends DCLogic {
   }
 
   applyLayout() {
-    const desk = window.innerWidth >= 940;
+    const w = window.innerWidth;
+    const desk = w >= 940;
+    const mob = w < 760;
     this.q('[data-desk]').forEach((el) => { el.style.display = desk ? 'flex' : 'none'; });
     this.q('[data-mob]').forEach((el) => { el.style.display = desk ? 'none' : 'flex'; });
     if (desk) this.setMenu(false);
+
+    const logo = document.getElementById('endo-header-logo');
+    if (logo) logo.style.height = mob ? '44px' : desk ? '62px' : '52px';
+    const glass = document.getElementById('endo-header-glass');
+    if (glass) {
+      glass.style.minHeight = desk ? '66px' : '56px';
+      glass.style.padding = desk ? '10px 14px 10px 22px' : '8px 10px';
+    }
+
+    const heroCopy = document.getElementById('endo-hero-copy');
+    if (heroCopy) {
+      heroCopy.style.maxWidth = desk ? 'min(620px,58%)' : '100%';
+      heroCopy.style.gap = mob ? '22px' : '28px';
+    }
+    const veil = document.getElementById('endo-hero-veil');
+    if (veil) {
+      veil.style.background = desk
+        ? 'linear-gradient(96deg,rgba(16,41,69,.9) 0%,rgba(16,41,69,.78) 34%,rgba(16,41,69,.34) 56%,rgba(16,41,69,.05) 74%)'
+        : 'linear-gradient(180deg,rgba(16,41,69,.72) 0%,rgba(16,41,69,.86) 58%,rgba(16,41,69,.94) 100%)';
+    }
+
+    const jm = document.getElementById('endo-jeito-media');
+    const jc = document.getElementById('endo-jeito-copy');
+    if (jm && jc) {
+      jm.style.order = mob ? '1' : '2';
+      jc.style.order = mob ? '2' : '1';
+      jm.style.minHeight = mob ? 'clamp(280px,68vw,420px)' : 'clamp(340px,44vw,620px)';
+    }
+
+    const fg = document.getElementById('endo-footer-grid');
+    const fl = document.getElementById('endo-footer-links');
+    const fn = document.getElementById('endo-footer-nav');
+    const fb = document.getElementById('endo-footer-brand');
+    const fmark = document.getElementById('endo-footer-mark');
+    const fclaim = document.getElementById('endo-footer-claim');
+    const fmeta = document.getElementById('endo-footer-meta');
+    const ft = document.getElementById('endo-footer');
+    const fe = document.getElementById('endo-footer-enso');
+    if (fl) fl.style.display = mob ? 'none' : 'flex';
+    if (fg) fg.style.gap = mob ? '28px' : '40px';
+    if (fn) {
+      fn.style.flexDirection = mob ? 'row' : 'column';
+      fn.style.flexWrap = 'wrap';
+      fn.style.gap = mob ? '10px 20px' : '12px';
+    }
+    if (fb) fb.style.gap = mob ? '16px' : '22px';
+    if (fmark) fmark.style.width = mob ? 'min(170px,62%)' : 'min(230px,80%)';
+    if (fclaim) fclaim.style.fontSize = mob ? '27px' : '34px';
+    if (fmeta) {
+      fmeta.style.paddingTop = mob ? '20px' : '26px';
+      fmeta.style.gap = mob ? '6px' : '12px 32px';
+      fmeta.style.flexDirection = mob ? 'column' : 'row';
+    }
+    if (ft) ft.style.padding = mob ? '44px var(--page-margin) 28px' : 'clamp(56px,7vw,96px) var(--page-margin) 40px';
+    if (fe) fe.style.opacity = mob ? '.05' : '.08';
+
+    this.q('[data-full-mob]').forEach((el) => {
+      el.style.width = mob ? '100%' : 'auto';
+      el.style.justifyContent = 'center';
+    });
   }
 
   setupHover() {
@@ -690,6 +729,29 @@ class Component extends DCLogic {
       if (field && field.focus) field.focus();
       return;
     }
+    const frenteEl = form.querySelector('[name="frente"]');
+    const frente = frenteEl ? (frenteEl.options ? frenteEl.options[frenteEl.selectedIndex].text : frenteEl.value) : '';
+    const frenteTxt = frente && frente !== 'Selecione uma frente' ? frente : 'Ainda a definir';
+    const texto = [
+      'Olá, Fabiana. Vim pelo site da Endo.',
+      '',
+      'Nome: ' + val('nome'),
+      'E-mail: ' + val('email'),
+      'Empresa: ' + (val('empresa') || '—'),
+      'Cargo: ' + (val('cargo') || '—'),
+      'Telefone: ' + (val('telefone') || '—'),
+      'Frente de interesse: ' + frenteTxt,
+      '',
+      'Sobre o momento atual:',
+      val('mensagem'),
+      '',
+      'Autorizo o tratamento dos meus dados para retorno deste contato.'
+    ].join('\n');
+    const numero = (this.props.whatsappNumero || '5511997811359').replace(/\D/g, '');
+    const url = 'https://wa.me/' + numero + '?text=' + encodeURIComponent(texto);
+    const link = document.getElementById('endo-form-wa-link');
+    if (link) link.setAttribute('href', url);
+    window.open(url, '_blank', 'noopener');
     form.style.display = 'none';
     const ok = document.getElementById('endo-form-success');
     if (ok) ok.style.display = 'flex';
