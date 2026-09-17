@@ -198,12 +198,12 @@ a:hover{color:#8E5F63}
   <section id="jeito" style="position:relative;overflow:hidden;scroll-margin-top:96px;background:var(--endo-navy-800)">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));align-items:stretch">
 
-      <div style="position:relative;order:2;min-height:clamp(340px,44vw,620px)">
+      <div id="endo-jeito-media" style="position:relative;order:2;min-height:clamp(340px,44vw,620px)">
         <img src="assets/photos/jeito-endo-facilitacao.png" alt="Fabiana Domingues facilitando uma conversa em grupo diante de um painel de post-its" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:48% 32%;display:block">
         <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(270deg,rgba(16,41,69,0) 58%,rgba(16,41,69,.62) 100%)"></div>
       </div>
 
-      <div data-reveal="" style="display:flex;flex-direction:column;justify-content:center;gap:clamp(24px,2.6vw,34px);padding:clamp(56px,7vw,104px) clamp(28px,5vw,88px)">
+      <div id="endo-jeito-copy" data-reveal="" style="display:flex;flex-direction:column;justify-content:center;gap:clamp(24px,2.6vw,34px);padding:clamp(56px,7vw,104px) clamp(28px,5vw,88px)">
         <span style="font-family:var(--font-sans);font-weight:700;font-size:12px;letter-spacing:.10em;color:rgba(234,227,209,.72)">· O jeito Endo</span>
         <p style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:clamp(28px,3.4vw,46px);line-height:1.18;letter-spacing:-0.015em;color:var(--endo-cream-300);max-width:20ch;text-wrap:pretty">A Endo não parte de respostas prontas.<br><strong style="font-weight:700">Parte da compreensão.</strong></p>
         <div style="display:flex;flex-direction:column;gap:18px;max-width:50ch">
@@ -408,14 +408,15 @@ a:hover{color:#8E5F63}
 
 <div aria-hidden="true" style="position:absolute;left:0;right:0;top:0;height:min(851px,70vh);pointer-events:none;background:linear-gradient(180deg,rgba(16,41,69,.5) 0%,rgba(16,41,69,0) 32%)"></div></main>
 
-<footer style="position:relative;overflow:hidden;padding:clamp(56px,7vw,96px) var(--page-margin) 40px;background:var(--endo-navy-900)">
-  <img src="assets/marks/enso-o-cream.png" alt="" aria-hidden="true" style="position:absolute;right:-14%;top:40px;width:min(684px,88vw);height:auto;opacity:.08;pointer-events:none">
+<footer id="endo-footer" style="position:relative;overflow:hidden;padding:clamp(56px,7vw,96px) var(--page-margin) 40px;background:var(--endo-navy-900)">
+  <img id="endo-footer-enso" src="assets/marks/enso-rodape-cream.png" alt="" aria-hidden="true" style="position:absolute;right:-16%;top:-8%;width:min(900px,92vw);height:auto;opacity:.08;pointer-events:none">
+  
   <div style="position:relative;max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(36px,4vw,56px)">
-    <div style="display: grid; grid-template-columns: repeat(auto-fit,minmax(min(220px,100%),1fr)); gap: 40px; align-items: start; position: relative">
-      <div style="display:flex;flex-direction:column;align-items:flex-start;gap:22px">
-        <img src="assets/marks/endo-animacao-recorte.gif" alt="Marca Endo em movimento" style="display:block;width:min(230px,80%);height:auto;pointer-events:none">
-      <p style="margin: 0; font-family: var(--font-script); font-size: 34px; line-height: 1.1; color: var(--endo-cream-300)">Toda transformação <br>começa por dentro.</p></div>
-      <nav aria-label="Navegação do rodapé" style="display:flex;flex-direction:column;gap:12px">
+    <div id="endo-footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit,minmax(min(220px,100%),1fr)); gap: 40px; align-items: start; position: relative">
+      <div id="endo-footer-brand" style="display:flex;flex-direction:column;align-items:flex-start;gap:22px">
+        <img id="endo-footer-mark" src="assets/marks/endo-animacao-recorte.gif" alt="Marca Endo em movimento" style="display:block;width:min(230px,80%);height:auto;pointer-events:none">
+      <p id="endo-footer-claim" style="margin: 0; font-family: var(--font-script); font-size: 34px; line-height: 1.1; color: var(--endo-cream-300)">Toda transformação <br>começa por dentro.</p></div>
+      <nav id="endo-footer-nav" aria-label="Navegação do rodapé" style="display:flex;flex-direction:column;gap:12px">
         <a href="#sobre" data-action="nav" data-target="sobre" style="font-size:15px;color:rgba(234,227,209,.78)">Sobre</a>
         <a href="#servicos" data-action="nav" data-target="servicos" style="font-size:15px;color:rgba(234,227,209,.78)">Como ajudamos</a>
         <a href="#jeito" data-action="nav" data-target="jeito" style="font-size:15px;color:rgba(234,227,209,.78)">O jeito Endo</a>
@@ -423,7 +424,7 @@ a:hover{color:#8E5F63}
         <a href="#origem" data-action="nav" data-target="origem" style="font-size:15px;color:rgba(234,227,209,.78)">Por que Endo</a>
         <a href="#contato" data-action="nav" data-target="contato" style="font-size:15px;color:rgba(234,227,209,.78)">Contato</a>
       </nav>
-      <div style="display:flex;flex-direction:column;gap:12px">
+      <div id="endo-footer-links" style="display:flex;flex-direction:column;gap:12px">
         <span style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(234,227,209,.45)">Onde encontrar</span>
         <a href="https://www.linkedin.com/in/fabiana-domingues/" target="_blank" rel="noopener" style="font-size:15px;color:rgba(234,227,209,.78)">LinkedIn</a>
         <a href="https://www.instagram.com/endodesenvolvimento" target="_blank" rel="noopener" style="font-size:15px;color:rgba(234,227,209,.78)">Instagram</a>
@@ -432,7 +433,7 @@ a:hover{color:#8E5F63}
         <a href="#" data-placeholder="" style="font-size:15px;color:rgba(234,227,209,.78)">Política de privacidade</a>
       </div>
     </div>
-    <div style="display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between;padding-top:26px;border-top:1px solid rgba(234,227,209,.16)">
+    <div id="endo-footer-meta" style="display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between;padding-top:26px;border-top:1px solid rgba(234,227,209,.16)">
       <span style="font-size:13px;color:rgba(234,227,209,.5)">© 2026 Endo — Desenvolvimento Humano.</span>
       <span style="font-size:13px;color:rgba(234,227,209,.5)">Criado por Ecco Criativo</span>
     </div>
@@ -545,6 +546,41 @@ class Component extends DCLogic {
         ? 'linear-gradient(96deg,rgba(16,41,69,.9) 0%,rgba(16,41,69,.78) 34%,rgba(16,41,69,.34) 56%,rgba(16,41,69,.05) 74%)'
         : 'linear-gradient(180deg,rgba(16,41,69,.72) 0%,rgba(16,41,69,.86) 58%,rgba(16,41,69,.94) 100%)';
     }
+
+    const jm = document.getElementById('endo-jeito-media');
+    const jc = document.getElementById('endo-jeito-copy');
+    if (jm && jc) {
+      jm.style.order = mob ? '1' : '2';
+      jc.style.order = mob ? '2' : '1';
+      jm.style.minHeight = mob ? 'clamp(280px,68vw,420px)' : 'clamp(340px,44vw,620px)';
+    }
+
+    const fg = document.getElementById('endo-footer-grid');
+    const fl = document.getElementById('endo-footer-links');
+    const fn = document.getElementById('endo-footer-nav');
+    const fb = document.getElementById('endo-footer-brand');
+    const fmark = document.getElementById('endo-footer-mark');
+    const fclaim = document.getElementById('endo-footer-claim');
+    const fmeta = document.getElementById('endo-footer-meta');
+    const ft = document.getElementById('endo-footer');
+    const fe = document.getElementById('endo-footer-enso');
+    if (fl) fl.style.display = mob ? 'none' : 'flex';
+    if (fg) fg.style.gap = mob ? '28px' : '40px';
+    if (fn) {
+      fn.style.flexDirection = mob ? 'row' : 'column';
+      fn.style.flexWrap = 'wrap';
+      fn.style.gap = mob ? '10px 20px' : '12px';
+    }
+    if (fb) fb.style.gap = mob ? '16px' : '22px';
+    if (fmark) fmark.style.width = mob ? 'min(170px,62%)' : 'min(230px,80%)';
+    if (fclaim) fclaim.style.fontSize = mob ? '27px' : '34px';
+    if (fmeta) {
+      fmeta.style.paddingTop = mob ? '20px' : '26px';
+      fmeta.style.gap = mob ? '6px' : '12px 32px';
+      fmeta.style.flexDirection = mob ? 'column' : 'row';
+    }
+    if (ft) ft.style.padding = mob ? '44px var(--page-margin) 28px' : 'clamp(56px,7vw,96px) var(--page-margin) 40px';
+    if (fe) fe.style.opacity = mob ? '.05' : '.08';
 
     this.q('[data-full-mob]').forEach((el) => {
       el.style.width = mob ? '100%' : 'auto';
