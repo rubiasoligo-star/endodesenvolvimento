@@ -28,7 +28,7 @@
 <script src="./image-slot.js"></script>
 <style>
 html{scroll-behavior:smooth}
-body{margin:0;background:#ECEBE3;color:#4A4A46;font-family:"Helvetica Brand","Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+body{margin:0;overflow-x:hidden;-webkit-text-size-adjust:100%;background:#ECEBE3;color:#4A4A46;font-family:"Helvetica Brand","Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:#3C537C;text-decoration:none}
 a:hover{color:#8E5F63}
 :focus-visible{outline:2px solid rgba(60,83,124,.55);outline-offset:3px;border-radius:4px}
@@ -61,7 +61,7 @@ a:hover{color:#8E5F63}
 </div>
 </div></header>
 
-<div id="endo-menu" role="dialog" aria-modal="true" aria-label="Menu" style="position:fixed;inset:0;z-index:80;display:none;flex-direction:column;gap:32px;padding:26px var(--page-margin) 48px;background:var(--endo-cream-100)">
+<div id="endo-menu" role="dialog" aria-modal="true" aria-label="Menu" style="position:fixed;inset:0;z-index:80;display:none;flex-direction:column;gap:clamp(20px,4vh,32px);padding:26px var(--page-margin) 48px;background:var(--endo-cream-100);overflow-y:auto;-webkit-overflow-scrolling:touch">
   <div style="display:flex;align-items:center;justify-content:space-between">
     <x-import component-from-global-scope="EndoDesignSystem_7dc05a.Logo" variant="horizontal" tone="blue" height="{{ 30 }}" hint-size="110px,30px"></x-import>
     <button data-action="menu-close" aria-label="Fechar menu" style="width:46px;height:46px;background:transparent;border:1px solid var(--border-cream);border-radius:999px;cursor:pointer;font-size:20px;color:var(--endo-navy-800);line-height:1">×</button>
@@ -82,8 +82,8 @@ a:hover{color:#8E5F63}
   
 
   <section id="hero" style="position: relative; overflow: hidden; scroll-margin-top: 96px; display: flex; align-items: center; padding: clamp(140px,16vw,190px) var(--page-margin) clamp(72px,9vw,110px); background-color: var(--endo-navy-800)">
-    <img src="assets/photos/hero-fabiana.png" alt="Fabiana Domingues em seu ateliê, com luz natural e painéis de referência ao fundo" style="position: absolute; inset: 0; width: 1631px; height: 1012px; object-fit: cover; object-position: 72% 30%; display: block; left: 46px; top: -15px">
-    <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(96deg,rgba(16,41,69,.9) 0%,rgba(16,41,69,.78) 34%,rgba(16,41,69,.34) 56%,rgba(16,41,69,.05) 74%); width: 1665px; height: 797px; left: -22px; top: -29px"></div>
+    <img src="assets/photos/hero-fabiana.png" alt="Fabiana Domingues em seu ateliê, com luz natural e painéis de referência ao fundo" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:72% 30%;display:block">
+    <div id="endo-hero-veil" aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(96deg,rgba(16,41,69,.9) 0%,rgba(16,41,69,.78) 34%,rgba(16,41,69,.34) 56%,rgba(16,41,69,.05) 74%)"></div>
     
 
     <div style="position:relative;width:100%;max-width:1180px;margin:0 auto">
@@ -91,9 +91,9 @@ a:hover{color:#8E5F63}
         
         <h1 style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:clamp(40px,5.4vw,72px);line-height:1.08;letter-spacing:-0.02em;color:var(--endo-cream-300);text-wrap:pretty;animation:endoFadeUp 900ms 120ms var(--ease-enter) both">Toda transformação<br><strong style="font-weight:700">começa por dentro.</strong></h1>
         <p style="margin:0;max-width:44ch;font-size:17px;line-height:1.72;color:rgba(255,253,237,.88);text-wrap:pretty;animation:endoFadeUp 900ms 260ms var(--ease-enter) both">A Endo acompanha pessoas e organizações em diferentes momentos e desafios, com escuta, presença e respeito à singularidade de cada contexto.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:14px;animation:endoFadeUp 900ms 400ms var(--ease-enter) both">
-          <a href="#sobre" data-action="nav" data-target="sobre" style="display:inline-flex;align-items:center;justify-content:center;padding:16px 32px;border-radius:999px;font-family:var(--font-sans);font-size:16px;color:var(--endo-navy-800);background:rgba(255,253,237,.9);backdrop-filter:blur(16px) saturate(180%);-webkit-backdrop-filter:blur(16px) saturate(180%);border:1px solid rgba(255,253,237,.75);box-shadow:0 14px 34px -22px rgba(16,41,69,.5),inset 0 1px 0 rgba(255,255,255,.6);transition:background 160ms var(--ease-calm),transform 160ms var(--ease-calm)" style-hover="background:rgba(255,253,237,1)" style-active="transform:scale(.985)">Conheça a Endo</a>
-          <a href="#contato" data-action="nav" data-target="contato" style="display:inline-flex;align-items:center;justify-content:center;padding:16px 32px;border-radius:999px;font-family:var(--font-sans);font-size:16px;color:var(--endo-cream-100);background:rgba(255,253,237,.12);backdrop-filter:blur(16px) saturate(180%);-webkit-backdrop-filter:blur(16px) saturate(180%);border:1px solid rgba(255,253,237,.45);box-shadow:0 14px 34px -24px rgba(16,41,69,.45),inset 0 1px 0 rgba(255,255,255,.28);transition:background 160ms var(--ease-calm),transform 160ms var(--ease-calm)" style-hover="background:rgba(255,253,237,.24)" style-active="transform:scale(.985)">Vamos conversar</a>
+        <div style="display:flex;flex-wrap:wrap;gap:14px;width:100%;animation:endoFadeUp 900ms 400ms var(--ease-enter) both">
+          <a href="#sobre" data-action="nav" data-target="sobre" data-full-mob="" style="display:inline-flex;align-items:center;justify-content:center;padding:16px 32px;border-radius:999px;font-family:var(--font-sans);font-size:16px;color:var(--endo-navy-800);background:rgba(255,253,237,.9);backdrop-filter:blur(16px) saturate(180%);-webkit-backdrop-filter:blur(16px) saturate(180%);border:1px solid rgba(255,253,237,.75);box-shadow:0 14px 34px -22px rgba(16,41,69,.5),inset 0 1px 0 rgba(255,255,255,.6);transition:background 160ms var(--ease-calm),transform 160ms var(--ease-calm)" style-hover="background:rgba(255,253,237,1)" style-active="transform:scale(.985)">Conheça a Endo</a>
+          <a href="#contato" data-action="nav" data-target="contato" data-full-mob="" style="display:inline-flex;align-items:center;justify-content:center;padding:16px 32px;border-radius:999px;font-family:var(--font-sans);font-size:16px;color:var(--endo-cream-100);background:rgba(255,253,237,.12);backdrop-filter:blur(16px) saturate(180%);-webkit-backdrop-filter:blur(16px) saturate(180%);border:1px solid rgba(255,253,237,.45);box-shadow:0 14px 34px -24px rgba(16,41,69,.45),inset 0 1px 0 rgba(255,255,255,.28);transition:background 160ms var(--ease-calm),transform 160ms var(--ease-calm)" style-hover="background:rgba(255,253,237,.24)" style-active="transform:scale(.985)">Vamos conversar</a>
         </div>
         
       </div>
@@ -101,7 +101,7 @@ a:hover{color:#8E5F63}
   </section>
 
   <section id="sobre" style="scroll-margin-top:96px;padding:clamp(72px,10vw,160px) var(--page-margin);background:var(--endo-cream-100)">
-    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(40px,6vw,88px);align-items:center">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:clamp(40px,6vw,88px);align-items:center">
       <div data-reveal="" style="display:flex;flex-direction:column;gap:28px;max-width:56ch">
         <h2 style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:clamp(28px,3.2vw,44px);line-height:1.22;letter-spacing:-0.01em;color:var(--endo-navy-800);max-width:22ch;text-wrap:pretty">Há momentos em que é preciso perceber com mais clareza onde estamos, para compreender o que pode vir a seguir.</h2>
         <p style="margin:0;font-size:17px;line-height:1.72;color:var(--text-body)">A vida, o trabalho e as organizações atravessam diferentes ciclos, e cada um deles pode trazer novas escolhas, desafios e possibilidades.</p>
@@ -124,7 +124,7 @@ a:hover{color:#8E5F63}
         <h2 style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:clamp(28px,3.2vw,44px);line-height:1.22;letter-spacing:-0.01em;color:var(--endo-navy-800)">Cada pessoa e cada organização vive desafios próprios.</h2>
         <p style="margin:0;font-size:16.5px;line-height:1.78;color:var(--text-body)">Por isso, a Endo não parte de soluções prontas. Busca compreender o momento, o contexto e a necessidade para construir a forma de atuação mais adequada.</p>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:20px">
         <article data-reveal="" data-hoverable="" style="display:flex;flex-direction:column;gap:18px;padding:32px;border-radius:20px;background:var(--endo-cream-100);box-shadow:var(--shadow-card);transition:box-shadow 280ms var(--ease-calm),transform 280ms var(--ease-calm)">
           <img src="assets/icons/frente-ikigai.png" alt="" aria-hidden="true" style="display:block;width:56px;height:56px">
           <h3 style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:23px;line-height:1.26;color:var(--endo-navy-800)">Mentoria &amp; Coaching</h3>
@@ -196,7 +196,7 @@ a:hover{color:#8E5F63}
   </section>
 
   <section id="jeito" style="position:relative;overflow:hidden;scroll-margin-top:96px;background:var(--endo-navy-800)">
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));align-items:stretch">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));align-items:stretch">
 
       <div style="position:relative;order:2;min-height:clamp(340px,44vw,620px)">
         <img src="assets/photos/jeito-endo-facilitacao.png" alt="Fabiana Domingues facilitando uma conversa em grupo diante de um painel de post-its" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:48% 32%;display:block">
@@ -220,7 +220,7 @@ a:hover{color:#8E5F63}
   <section id="fabiana" style="scroll-margin-top:96px;padding:clamp(72px,10vw,160px) var(--page-margin);background:var(--endo-paper-100)">
     <div style="max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(48px,6vw,80px)">
       
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(40px,6vw,88px);align-items:center">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:clamp(40px,6vw,88px);align-items:center">
         <div data-reveal="" style="position:relative;width:100%;max-width:460px;justify-self:center">
           <div style="overflow: hidden; border-radius: 28px; background: var(--endo-cream-300); aspect-ratio: 3 / 4; box-shadow: var(--shadow-card); width: 100%; height: auto">
             
@@ -249,7 +249,7 @@ a:hover{color:#8E5F63}
     <img src="assets/marks/enso-cream.png" alt="" aria-hidden="true" style="position:absolute;right:-26%;top:-38%;width:min(1180px,92vw);height:auto;opacity:.62;pointer-events:none">
     <div style="position:relative;max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(48px,6vw,84px)">
 
-      <div data-reveal="" style="display:grid;grid-template-columns:minmax(300px,1.1fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:start">
+      <div data-reveal="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:clamp(32px,5vw,72px);align-items:start">
         <div style="display:flex;flex-direction:column;gap:24px;max-width:52ch">
           <x-import component-from-global-scope="EndoDesignSystem_7dc05a.SectionLabel" hint-size="auto,16px">Por que Endo</x-import>
           <h2 style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:clamp(30px,3.6vw,50px);line-height:1.18;letter-spacing:-0.015em;color:var(--endo-navy-800);max-width:18ch">Endo é o sobrenome da minha família materna.</h2>
@@ -280,7 +280,7 @@ a:hover{color:#8E5F63}
         <x-import component-from-global-scope="EndoDesignSystem_7dc05a.SectionLabel" hint-size="auto,16px">Conceitos que nos inspiram</x-import>
         <p style="margin:0;font-size:16.5px;line-height:1.78;color:var(--text-body)">Alguns conceitos japoneses encontram ressonância na filosofia da Endo e ajudam a dar linguagem aos princípios que orientam nossa forma de compreender o desenvolvimento humano.</p>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:24px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(150px,100%),1fr));gap:24px">
         <div data-reveal="" style="display:flex;flex-direction:column;gap:14px"><img src="assets/icons/frente-sunao.png" alt="" aria-hidden="true" style="display:block;width:64px;height:64px"><h3 style="margin:0;font-family:var(--font-sans);font-weight:400;font-size:20px;color:var(--endo-navy-800)">Sunao</h3><p style="margin:0;font-size:15.5px;line-height:1.72;color:var(--text-body)">Abertura, receptividade, humildade e honestidade.</p></div>
         <div data-reveal="" style="display:flex;flex-direction:column;gap:14px"><img src="assets/icons/frente-makoto.png" alt="" aria-hidden="true" style="display:block;width:64px;height:64px"><h3 style="margin:0;font-family:var(--font-sans);font-weight:400;font-size:20px;color:var(--endo-navy-800)">Makoto</h3><p style="margin:0;font-size:15.5px;line-height:1.72;color:var(--text-body)">Verdade, sinceridade, integridade e coerência.</p></div>
         <div data-reveal="" style="display:flex;flex-direction:column;gap:14px"><img src="assets/icons/frente-ikigai.png" alt="" aria-hidden="true" style="display:block;width:64px;height:64px"><h3 style="margin:0;font-family:var(--font-sans);font-weight:400;font-size:20px;color:var(--endo-navy-800)">Ikigai</h3><p style="margin:0;font-size:15.5px;line-height:1.72;color:var(--text-body)">Sentido e direção.</p></div>
@@ -298,7 +298,7 @@ a:hover{color:#8E5F63}
         <h2 style="margin:0;font-family:var(--font-sans);font-weight:300;font-size:clamp(30px,3.6vw,50px);line-height:1.18;letter-spacing:-0.015em;color:var(--endo-navy-800);max-width:16ch">Vozes sobre essa trajetória</h2>
         <p style="margin:0;font-size:16.5px;line-height:1.78;color:var(--text-body)">Pessoas que trabalharam com Fabiana ao longo de sua carreira.</p>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));gap:clamp(32px,4vw,60px)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(272px,100%),1fr));gap:clamp(32px,4vw,60px)">
         <figure data-reveal="" style="margin:0;display:flex;flex-direction:column;gap:22px;padding-top:28px;border-top:1px solid rgba(60,83,124,.22)">
           <blockquote style="margin:0;font-size:15.5px;font-style:italic;line-height:1.74;color:var(--text-body);text-wrap:pretty">“Fabiana é uma profissional que se destaca pela forte visão estratégica e pela sua capacidade de entrega. Orientada à solução, consegue equilibrar as necessidades do negócio com uma abordagem humana e empática. Sua parceria foi fundamental para o desenvolvimento do time, para fortalecer a cultura corporativa e as melhores práticas de gestão.”</blockquote>
           <figcaption style="display:flex;align-items:center;gap:14px;margin-top:auto;padding-top:20px;border-top:1px solid rgba(60,83,124,.22)">
@@ -334,10 +334,10 @@ a:hover{color:#8E5F63}
   </section>
 
   <section id="contato" style="position:relative;overflow:hidden;scroll-margin-top:96px;padding:clamp(72px,10vw,150px) var(--page-margin);background:var(--endo-rose-500)">
-    <div style="position:relative;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(40px,6vw,88px);align-items:start">
+    <div style="position:relative;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:clamp(40px,6vw,88px);align-items:start">
       <div data-reveal="" style="display:flex;flex-direction:column;gap:24px;max-width:46ch">
         <span style="display:inline-block;font-family:var(--font-sans);font-weight:700;font-size:12px;letter-spacing:.10em;color:var(--endo-cream-100)">· Contato</span>
-        <h2 style="margin: 0; font-family: var(--font-sans); font-weight: 300; font-size: clamp(28px,3.2vw,44px); line-height: 1.22; letter-spacing: -0.01em; color: var(--endo-cream-100); width: 342px; height: 159px">Talvez o primeiro movimento seja uma conversa.</h2>
+        <h2 style="margin: 0; font-family: var(--font-sans); font-weight: 300; font-size: clamp(28px,3.2vw,44px); line-height: 1.22; letter-spacing: -0.01em; color: var(--endo-cream-100); max-width: 22ch">Talvez o primeiro movimento seja uma conversa.</h2>
         <p style="margin:0;font-size:16.5px;line-height:1.78;color:rgba(255,253,237,.86)">Se alguma questão, desafio ou possibilidade trouxe você até aqui, podemos começar compreendendo melhor o que está acontecendo e o que pode fazer sentido a partir daí.</p>
         <div style="display:flex;flex-direction:column;gap:2px;margin-top:8px;padding-top:22px;border-top:1px solid rgba(255,253,237,.32)">
           <a href="mailto:fabiana@endodesenvolvimento.com.br" style="display:flex;align-items:center;gap:14px;padding:10px 0;font-size:15.5px;color:var(--endo-cream-100);transition:opacity 160ms var(--ease-calm)" style-hover="opacity:.75">
@@ -361,7 +361,7 @@ a:hover{color:#8E5F63}
       </div>
       <div data-reveal="">
         <form id="endo-form" novalidate="" style="display:flex;flex-direction:column;gap:18px;padding:clamp(28px,3vw,40px);border-radius:24px;background:var(--endo-cream-100);border:1px solid var(--border-cream);box-shadow:var(--shadow-card)">
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:18px">
             <div>
               <x-import component-from-global-scope="EndoDesignSystem_7dc05a.Input" tone="light" label="Nome" name="nome" autocomplete="name" hint-size="100%,72px"></x-import>
               <span data-err="nome" role="alert" style="display:none;margin-top:6px;font-size:13.5px;color:var(--endo-wine-600)">Por favor, informe seu nome.</span>
@@ -406,12 +406,12 @@ a:hover{color:#8E5F63}
     </div>
   </section>
 
-<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg,rgba(16,41,69,.5) 0%,rgba(16,41,69,0) 32%); left: 21px; top: -69px; width: 1643px; height: 939px"></div></main>
+<div aria-hidden="true" style="position:absolute;left:0;right:0;top:0;height:min(851px,70vh);pointer-events:none;background:linear-gradient(180deg,rgba(16,41,69,.5) 0%,rgba(16,41,69,0) 32%)"></div></main>
 
 <footer style="position:relative;overflow:hidden;padding:clamp(56px,7vw,96px) var(--page-margin) 40px;background:var(--endo-navy-900)">
-  <img src="assets/marks/enso-o-cream.png" alt="" aria-hidden="true" style="position: absolute; width: 684px; height: 671px; opacity: .08; pointer-events: none; left: 1084px; top: 51px">
+  <img src="assets/marks/enso-o-cream.png" alt="" aria-hidden="true" style="position:absolute;right:-14%;top:40px;width:min(684px,88vw);height:auto;opacity:.08;pointer-events:none">
   <div style="position:relative;max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(36px,4vw,56px)">
-    <div style="display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 40px; align-items: start; position: relative">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit,minmax(min(220px,100%),1fr)); gap: 40px; align-items: start; position: relative">
       <div style="display:flex;flex-direction:column;align-items:flex-start;gap:22px">
         <img src="assets/marks/endo-animacao-recorte.gif" alt="Marca Endo em movimento" style="display:block;width:min(230px,80%);height:auto;pointer-events:none">
       <p style="margin: 0; font-family: var(--font-script); font-size: 34px; line-height: 1.1; color: var(--endo-cream-300)">Toda transformação <br>começa por dentro.</p></div>
@@ -519,10 +519,37 @@ class Component extends DCLogic {
   }
 
   applyLayout() {
-    const desk = window.innerWidth >= 940;
+    const w = window.innerWidth;
+    const desk = w >= 940;
+    const mob = w < 760;
     this.q('[data-desk]').forEach((el) => { el.style.display = desk ? 'flex' : 'none'; });
     this.q('[data-mob]').forEach((el) => { el.style.display = desk ? 'none' : 'flex'; });
     if (desk) this.setMenu(false);
+
+    const logo = document.getElementById('endo-header-logo');
+    if (logo) logo.style.height = mob ? '44px' : desk ? '62px' : '52px';
+    const glass = document.getElementById('endo-header-glass');
+    if (glass) {
+      glass.style.minHeight = desk ? '66px' : '56px';
+      glass.style.padding = desk ? '10px 14px 10px 22px' : '8px 10px';
+    }
+
+    const heroCopy = document.getElementById('endo-hero-copy');
+    if (heroCopy) {
+      heroCopy.style.maxWidth = desk ? 'min(620px,58%)' : '100%';
+      heroCopy.style.gap = mob ? '22px' : '28px';
+    }
+    const veil = document.getElementById('endo-hero-veil');
+    if (veil) {
+      veil.style.background = desk
+        ? 'linear-gradient(96deg,rgba(16,41,69,.9) 0%,rgba(16,41,69,.78) 34%,rgba(16,41,69,.34) 56%,rgba(16,41,69,.05) 74%)'
+        : 'linear-gradient(180deg,rgba(16,41,69,.72) 0%,rgba(16,41,69,.86) 58%,rgba(16,41,69,.94) 100%)';
+    }
+
+    this.q('[data-full-mob]').forEach((el) => {
+      el.style.width = mob ? '100%' : 'auto';
+      el.style.justifyContent = 'center';
+    });
   }
 
   setupHover() {
