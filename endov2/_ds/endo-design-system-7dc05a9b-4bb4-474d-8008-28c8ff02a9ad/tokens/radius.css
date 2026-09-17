@@ -1,0 +1,10 @@
+:root{
+  --radius-xs:6px;
+  --radius-sm:10px;
+  --radius-md:16px;
+  --radius-lg:24px;
+  --radius-xl:32px;
+  --radius-card:20px;   /* the brand's default soft card */
+  --radius-pill:999px;
+  --radius-circle:50%;
+}

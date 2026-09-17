@@ -1,0 +1,12 @@
+:root{
+  --space-2:2px;--space-4:4px;--space-6:6px;--space-8:8px;--space-12:12px;--space-16:16px;
+  --space-20:20px;--space-24:24px;--space-32:32px;--space-40:40px;--space-56:56px;
+  --space-72:72px;--space-96:96px;--space-128:128px;--space-160:160px;
+  --gutter:24px;
+  --page-margin:clamp(24px,7vw,120px);
+  --measure-narrow:34ch;
+  --measure:58ch;
+  --measure-wide:72ch;
+  --container:1180px;
+  --section-y:clamp(72px,10vw,160px); /* @kind spacing */
+}

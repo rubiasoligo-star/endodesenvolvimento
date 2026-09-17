@@ -1,0 +1,32 @@
+:root{
+  --font-display:"BioRhyme",Georgia,"Times New Roman",serif;   /* brand moments, taglines, numerals */
+  --font-sans:"Helvetica Brand","Helvetica Neue",Helvetica,Arial,sans-serif; /* weight 300 → see tokens/fonts.css */ /* everything else */
+  --font-script:"Autography","Helvetica Brand",cursive;        /* the signature only */
+  --font-rounded:"Helvetica Rounded Brand","Helvetica Brand",sans-serif;
+  --font-compressed:"Helvetica Compressed Brand","Helvetica Brand",sans-serif;
+
+  --text-display-1:clamp(48px,6vw,84px);
+  --text-display-2:clamp(36px,4.4vw,60px);
+  --text-statement:clamp(28px,3.2vw,44px);
+  --text-h1:34px;
+  --text-h2:26px;
+  --text-h3:20px;
+  --text-lead:19px;
+  --text-body-lg:17px;
+  --text-body-md:15px;
+  --text-body-sm:13.5px;
+  --text-label:12px;
+
+  --leading-tight:1.12;
+  --leading-snug:1.28;
+  --leading-normal:1.5;
+  --leading-relaxed:1.72;
+
+  --tracking-display:-0.01em;
+  --tracking-normal:0;
+  --tracking-label:0.14em;
+
+  --weight-light:300;
+  --weight-regular:400;
+  --weight-bold:700;
+}
